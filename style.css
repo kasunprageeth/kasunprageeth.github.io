@@ -1,0 +1,1589 @@
+/*==========================================================
+					CSS Document  
+============================================================
+ 
+Template Name			: Dariel 
+Description				: Personal Portfolio HTML Template
+Design and Developed by	: Theme-Corner
+Version					: 1.0
+Created on				: 26/05/2017, 03:10:00 	
+   
+============================================================
+					Table of Contents  
+============================================================
+ 
+1.   Base CSS
+2.   Preloader & Underline In each Section CSS
+3.   Header Section CSS
+4.   Menu Section CSS	
+5.   Start Hero Image Section CSS
+	  5.1 Start Random Moving Stars on Hero Image
+6.   About Me Section CSS
+7.   Skill Part Section
+8.   Counter Section CSS
+9.   Service Section
+10.  Hire Section CSS
+11.  Resume Section
+	  11.1 Timeline CSS
+12.  Portfolio Section
+	  12.1 Portfolio Slider Section CSS
+13.  Client Section
+	  13.1. Client Slider Section CSS
+14.  Testimonial Slider Section CSS	
+15.  Blog Section
+16.  Contact Section
+	  16.1 Client address CSS
+	  16.2 Google Map CSS	
+17.  Footer Section	
+18.  Scroll To Top Section
+19.  Media Queries
+
+============================================================
+					End Table of Content 
+============================================================
+
+
+/***********************************************************
+		1.  Base CSS			
+************************************************************/
+
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+	background: #fff;
+	color: #404040 !important;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	overflow-x: hidden !important;
+    line-height: 30px;
+	-webkit-font-smoothing: antialiased;
+}
+p{	
+	font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    line-height: 30px;
+	margin: 0;
+}
+h1 {
+    font-size: 80px;	
+}
+h2{
+    font-size: 40px;
+	color: #262626;
+}
+h3 {
+    font-size: 30px;
+	color: #262626;
+}
+h4{
+	font-size: 20px;
+	color: #262626;
+}
+h5{
+	font-size: 17px;
+	color: #262626;
+}
+h6{
+	font-size: 15px;
+	color: #262626;
+}
+
+/***************************************************************
+		2.  Preloader & Underline In each Section CSS			
+****************************************************************/
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 999999;
+	background: url('images/spin.gif') 50% 50% no-repeat rgb(249,249,249);
+}
+.underline {
+    height: 3px;
+    width: 75px;
+    background-color: #feea0e;
+    margin: auto;
+	transform: scaleX(1);
+    transition: all .3s ease-in-out;
+
+}
+.service_section :hover .underline,
+.resume_section :hover .underline,
+.portfolio-section :hover .underline,
+.client_section :hover .underline,
+.testimonial_section :hover .underline,
+.blog_section :hover .underline,
+.contact_section :hover .underline{
+    width: 200px;
+	transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+}
+/**************************************************
+		3. Header Section CSS			
+**************************************************/
+.header_section{
+	width: 100%;
+	top: 0;
+	left: 0;
+	margin: 0;
+	z-index: 9;
+}
+/**************************************************
+		4. Menu Section CSS			
+**************************************************/
+
+a.dariel-brand{
+    display: inline-block;
+	font-family: 'Lora', serif;
+    font-size: 25px;
+	color: #fff !important;
+    font-weight: 700;
+    letter-spacing: 1px;
+	padding-top: 18px;
+	padding-left: 30px;
+}
+a.dariel-brand span{
+	color: #feea0e !important;
+}
+/*
+.dariel-brand {
+    float: left;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 30px;
+}
+*/
+.opaque-navbar {
+    background-color: rgba(0,0,0,0);
+    height: 60px;
+    border-bottom: 0px;
+    transition: background-color .5s ease 0s;
+}
+
+.opaque-navbar.opaque {
+    background-color: black;
+    height: 60px;
+    transition: background-color .5s ease 0s;
+}
+.navbar-nav>li>a {
+	font-size: 14px;
+	font-weight: 600;
+	color:#fff !important;
+}
+.navbar-nav>li:last-child {
+	padding-right:20px;
+}
+.navbar-nav>li>a:hover {
+    color:#feea0e !important;
+	transition: all 0.5s ease-in-out 0s;
+}
+.navbar-inverse .navbar-nav>.active>a, 
+.navbar-inverse .navbar-nav>.active>a:focus, 
+.navbar-inverse .navbar-nav>.active>a:hover {
+    color: #feea0e !important;
+    background-color: transparent;	
+}
+.navbar-inverse .navbar-collapse {
+    border-color: #feea0e;
+}
+
+/**************************************************
+		5. Start Hero Image Section CSS			
+**************************************************/
+.hero_section{
+	overflow: hidden;
+}
+.hero-unit{
+	position: relative;
+    background-image:url('images/hero_image.jpg');
+    background-size:cover;
+    height:100vh;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.distable{
+	display: table;
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+.discell{
+	display: table-cell;
+	vertical-align: middle;
+}
+.hero_overlay{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+	left: 0;
+	top: 0;
+	content: "";
+	display: block;
+    background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0;
+}
+.hero_overlay h1{
+    font-family: 'Lora', serif;
+    letter-spacing: 3px;
+    font-weight: 700;
+    line-height: 70px;
+    padding: 0;
+	color: #ffffff;
+	margin: 0 auto;
+}
+/* For blinking Cursor */
+.wrap{
+	margin: 0 auto;
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	border-right: 3px solid #feea0e; /* The typwriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	animation: typing 4s steps(44) 1s 1 normal both,
+             blink-caret 500ms steps(44) infinite normal;
+}
+/* The typing effect */
+@keyframes typing {
+	from { width: 0%;}
+	to { width: 60%; }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+ from{border-right-color: #feea0e;}
+  to{border-right-color: transparent;}
+}
+.hero_overlay h4{	
+	font-family: 'PT Serif', serif;
+    line-height: 30px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+	margin-top: 40px;
+}
+.hero_overlay a i{
+	position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    bottom: 50px;
+    width: 50px;
+	z-index: 1;
+    color: #feea0e;
+	opacity: 0.5;
+    -webkit-animation: 3s ease 0s normal none infinite running bounce;
+    animation: 3s ease 0s normal none infinite running bounce;
+    font-size: 40px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    text-align: center;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+.hero_overlay a i:hover{
+	opacity: 1;
+}
+/*********************************************************
+		5.1 Start Random Moving Stars on Hero Image 			
+**********************************************************/
+#stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 1300px 3086px #fff , 278px 1509px #fff , 69px 166px #fff , 1046px 390px #fff , 465px 413px #fff , 868px 1529px #fff , 62px 1891px #fff , 1243px 1838px #fff , 1650px 7px #fff , 124px 1049px #fff , 190px 1712px #fff , 1762px 1979px #fff , 308px 1891px #fff , 871px 1893px #fff , 595px 606px #fff , 13px 1668px #fff , 1px 311px #fff , 33px 795px #fff , 1706px 629px #fff , 750px 692px #fff , 1113px 1789px #fff , 1666px 317px #fff , 1406px 1055px #fff , 1199px 119px #fff , 646px 795px #fff , 1255px 1881px #fff , 1479px 1446px #fff , 63px 1234px #fff , 1316px 1399px #fff , 871px 141px #fff , 188px 1507px #fff , 1061px 895px #fff , 1874px 1368px #fff , 1340px 610px #fff , 1503px 851px #fff , 850px 317px #fff , 1238px 1561px #fff , 1700px 986px #fff , 585px 1288px #fff , 556px 1842px #fff , 989px 1280px #fff , 1225px 838px #fff , 310px 313px #fff , 1157px 925px #fff , 1208px 1212px #fff , 844px 1458px #fff , 1385px 1193px #fff , 50px 1525px #fff , 359px 1799px #fff , 1538px 1710px #fff , 737px 1570px #fff , 1181px 983px #fff , 1202px 177px #fff , 1038px 157px #fff , 1590px 644px #fff , 611px 1559px #fff , 1167px 1097px #fff , 260px 1834px #fff , 1470px 381px #fff , 816px 1149px #fff , 1275px 1448px #fff , 228px 1708px #fff , 1236px 1556px #fff , 1934px 1906px #fff , 37px 1594px #fff , 960px 843px #fff , 1474px 1228px #fff , 528px 396px #fff , 1794px 865px #fff , 1092px 1289px #fff , 1711px 980px #fff , 560px 1985px #fff , 401px 369px #fff , 1762px 1306px #fff , 967px 518px #fff , 1783px 422px #fff , 1847px 1148px #fff , 1745px 427px #fff , 1468px 997px #fff , 1371px 478px #fff , 908px 205px #fff , 298px 611px #fff , 1848px 286px #fff , 708px 140px #fff , 1214px 756px #fff , 335px 1447px #fff , 889px 1988px #fff , 1878px 1247px #fff , 871px 1582px #fff , 563px 36px #fff , 1024px 1162px #fff , 1116px 1118px #fff , 1760px 1899px #fff , 1583px 325px #fff , 148px 418px #fff , 1691px 45px #fff , 184px 941px #fff , 1456px 810px #fff , 931px 41px #fff , 86px 657px #fff , 609px 1378px #fff , 571px 1773px #fff , 1281px 1865px #fff , 1622px 1229px #fff , 52px 1203px #fff , 182px 548px #fff , 889px 1565px #fff , 216px 382px #fff , 432px 1336px #fff , 460px 751px #fff , 1708px 57px #fff , 1865px 432px #fff , 910px 121px #fff , 124px 1029px #fff , 1220px 939px #fff , 976px 655px #fff , 34px 1894px #fff , 1406px 1497px #fff , 1184px 346px #fff , 1723px 1514px #fff , 1086px 69px #fff , 1847px 1537px #fff , 201px 910px #fff , 718px 1315px #fff , 265px 933px #fff , 63px 1489px #fff , 1456px 1131px #fff , 860px 432px #fff , 575px 443px #fff , 1888px 725px #fff , 893px 377px #fff , 1945px 301px #fff , 984px 461px #fff , 298px 896px #fff , 1811px 807px #fff , 994px 1315px #fff , 291px 580px #fff , 1278px 859px #fff , 1310px 1326px #fff , 1400px 790px #fff , 497px 951px #fff , 636px 1367px #fff , 289px 225px #fff , 101px 631px #fff , 897px 7px #fff , 1751px 641px #fff , 824px 62px #fff , 788px 904px #fff , 1123px 171px #fff , 778px 1730px #fff , 597px 1277px #fff , 1981px 1960px #fff , 1941px 1240px #fff , 1145px 329px #fff , 268px 1428px #fff , 1752px 1787px #fff , 790px 1835px #fff , 98px 1567px #fff , 1973px 1056px #fff , 460px 639px #fff , 45px 1249px #fff , 1729px 1261px #fff , 424px 1426px #fff , 984px 1467px #fff , 1188px 217px #fff , 1559px 710px #fff , 60px 993px #fff , 1936px 768px #fff , 1126px 684px #fff , 346px 34px #fff , 1983px 1997px #fff , 229px 614px #fff , 1510px 1151px #fff , 1505px 611px #fff , 1848px 1325px #fff , 494px 525px #fff , 1236px 591px #fff , 825px 1003px #fff , 1450px 60px #fff , 1378px 197px #fff , 455px 1364px #fff , 915px 1825px #fff , 1426px 1903px #fff , 3px 590px #fff , 1891px 878px #fff , 378px 1949px #fff , 1003px 137px #fff , 1016px 179px #fff , 388px 1291px #fff , 1643px 912px #fff , 1153px 1648px #fff , 956px 1553px #fff , 327px 375px #fff , 224px 1613px #fff , 110px 187px #fff , 1599px 1166px #fff , 118px 828px #fff , 724px 1090px #fff , 1538px 99px #fff , 1917px 1184px #fff , 1677px 574px #fff , 613px 699px #fff , 268px 1824px #fff , 707px 1067px #fff , 123px 24px #fff , 1619px 1189px #fff , 939px 397px #fff , 388px 1162px #fff , 286px 299px #fff , 34px 1513px #fff , 1977px 1061px #fff , 1167px 697px #fff , 374px 444px #fff , 788px 512px #fff , 1224px 376px #fff , 654px 1104px #fff , 1603px 80px #fff , 127px 626px #fff , 970px 986px #fff , 952px 1578px #fff , 949px 1927px #fff , 754px 1892px #fff , 1567px 480px #fff , 921px 1737px #fff , 697px 1931px #fff , 1132px 1320px #fff , 878px 469px #fff , 141px 726px #fff , 1984px 6px #fff , 1907px 1814px #fff , 1054px 1949px #fff , 1313px 76px #fff , 1966px 1150px #fff , 918px 180px #fff , 650px 776px #fff , 640px 1757px #fff , 253px 590px #fff , 503px 947px #fff , 1471px 1813px #fff , 1916px 1792px #fff , 225px 1988px #fff , 395px 819px #fff , 965px 1080px #fff , 721px 1701px #fff , 557px 934px #fff , 1815px 1828px #fff , 1956px 1010px #fff , 964px 469px #fff , 1536px 383px #fff , 1229px 1412px #fff , 57px 926px #fff , 1454px 1158px #fff , 306px 401px #fff , 886px 195px #fff , 690px 795px #fff , 527px 1534px #fff , 508px 1110px #fff , 1000px 1551px #fff , 743px 942px #fff , 843px 608px #fff , 1013px 46px #fff , 93px 360px #fff , 1746px 111px #fff , 1215px 698px #fff , 221px 1693px #fff , 1087px 808px #fff , 1437px 278px #fff , 1861px 1871px #fff , 1223px 1576px #fff , 824px 1636px #fff , 364px 493px #fff , 173px 46px #fff , 1887px 105px #fff , 1361px 1652px #fff , 745px 540px #fff , 1599px 1508px #fff , 1781px 1478px #fff , 371px 1863px #fff , 863px 1320px #fff , 213px 1269px #fff , 1036px 1025px #fff , 21px 877px #fff , 1234px 468px #fff , 589px 1000px #fff , 1751px 657px #fff , 797px 902px #fff , 990px 1937px #fff , 1022px 230px #fff , 1236px 306px #fff , 672px 148px #fff , 606px 1529px #fff , 337px 762px #fff , 830px 573px #fff , 1566px 319px #fff , 1961px 1236px #fff , 1512px 664px #fff , 1044px 388px #fff , 1687px 1927px #fff , 1452px 1888px #fff , 665px 266px #fff , 711px 1238px #fff , 1673px 965px #fff , 1773px 1115px #fff , 236px 763px #fff , 1987px 1049px #fff , 1797px 341px #fff , 1801px 1478px #fff , 1164px 1532px #fff , 1607px 549px #fff , 51px 1181px #fff , 485px 982px #fff , 289px 1616px #fff , 497px 1357px #fff , 589px 1645px #fff , 1474px 1984px #fff , 1776px 845px #fff , 1610px 1829px #fff , 353px 816px #fff , 220px 1094px #fff , 101px 1486px #fff , 1296px 912px #fff , 410px 320px #fff , 1390px 981px #fff , 606px 47px #fff , 837px 1796px #fff , 1107px 1316px #fff , 94px 1262px #fff , 1397px 1328px #fff , 1332px 1282px #fff , 1390px 1904px #fff , 601px 1395px #fff , 1203px 125px #fff , 351px 1799px #fff , 1778px 1245px #fff , 1936px 1478px #fff , 794px 626px #fff , 425px 996px #fff , 422px 1866px #fff , 79px 1269px #fff , 540px 1684px #fff , 1103px 602px #fff , 584px 936px #fff , 759px 617px #fff , 1740px 81px #fff , 841px 589px #fff , 330px 1111px #fff , 904px 650px #fff , 1411px 1713px #fff , 1550px 939px #fff , 1620px 1836px #fff , 287px 469px #fff , 999px 795px #fff , 1801px 745px #fff , 888px 282px #fff , 191px 1382px #fff , 779px 922px #fff , 496px 1089px #fff , 1460px 143px #fff , 1479px 103px #fff , 1181px 590px #fff , 1444px 889px #fff , 583px 873px #fff , 428px 1307px #fff , 1571px 1992px #fff , 1623px 1208px #fff , 34px 1500px #fff , 699px 1921px #fff , 1221px 606px #fff , 1365px 1214px #fff , 18px 1033px #fff , 1889px 1501px #fff , 366px 1786px #fff , 1710px 610px #fff , 1412px 242px #fff , 1821px 1593px #fff , 1596px 617px #fff , 1845px 1447px #fff , 1129px 1319px #fff , 1453px 1872px #fff , 1514px 1821px #fff , 755px 538px #fff , 404px 1786px #fff , 1922px 1565px #fff , 1693px 29px #fff , 460px 1119px #fff , 442px 423px #fff , 832px 475px #fff , 1087px 281px #fff , 1471px 923px #fff , 676px 877px #fff , 197px 1915px #fff , 941px 1652px #fff , 1093px 1741px #fff , 1060px 1713px #fff , 1174px 745px #fff , 621px 1067px #fff , 1990px 442px #fff , 841px 982px #fff , 637px 1763px #fff , 1002px 206px #fff , 1394px 1268px #fff , 801px 204px #fff , 347px 686px #fff , 1278px 283px #fff , 1723px 1856px #fff , 1472px 148px #fff , 1303px 697px #fff , 850px 1504px #fff , 965px 114px #fff , 1234px 179px #fff , 928px 656px #fff , 1618px 745px #fff , 1691px 4px #fff , 38px 1983px #fff , 811px 1727px #fff , 264px 1607px #fff , 166px 195px #fff , 675px 357px #fff , 1677px 805px #fff , 1813px 127px #fff , 29px 1449px #fff , 65px 1761px #fff , 1815px 1961px #fff , 1660px 413px #fff , 602px 315px #fff , 643px 956px #fff , 174px 548px #fff , 1922px 1763px #fff , 580px 1700px #fff , 863px 927px #fff , 591px 427px #fff , 1395px 1215px #fff , 181px 1178px #fff , 670px 1266px #fff , 1350px 1448px #fff , 1939px 1768px #fff , 1213px 1499px #fff , 1815px 1390px #fff , 165px 1749px #fff , 722px 902px #fff , 1681px 17px #fff , 1573px 528px #fff , 1347px 541px #fff , 1538px 672px #fff , 1094px 28px #fff , 442px 43px #fff , 1381px 430px #fff , 1492px 1078px #fff , 420px 1370px #fff , 746px 827px #fff , 1483px 1165px #fff , 561px 518px #fff , 691px 989px #fff , 1714px 1782px #fff , 800px 1215px #fff , 1051px 639px #fff , 1642px 957px #fff , 866px 1285px #fff , 1896px 448px #fff , 441px 1301px #fff , 1359px 1158px #fff , 556px 564px #fff , 1112px 1339px #fff , 1569px 1018px #fff , 1986px 999px #fff , 1578px 1027px #fff , 47px 1403px #fff , 954px 498px #fff , 787px 1720px #fff , 1016px 1202px #fff , 1459px 1517px #fff , 442px 170px #fff , 1167px 1466px #fff , 1096px 658px #fff , 867px 1935px #fff , 425px 1930px #fff , 1647px 748px #fff , 566px 1898px #fff , 325px 942px #fff , 1650px 1298px #fff , 971px 110px #fff , 903px 937px #fff , 312px 388px #fff , 463px 1538px #fff , 1315px 1598px #fff , 1251px 1767px #fff , 527px 503px #fff , 68px 1926px #fff , 45px 1690px #fff , 501px 712px #fff , 925px 1803px #fff , 446px 187px #fff , 1484px 1047px #fff , 1108px 1963px #fff , 1150px 1770px #fff , 1586px 1581px #fff , 1282px 1119px #fff , 753px 32px #fff , 33px 1928px #fff , 1818px 1895px #fff , 1973px 997px #fff , 1170px 602px #fff , 630px 1311px #fff , 1369px 1964px #fff , 1423px 1945px #fff , 686px 1197px #fff , 1861px 113px #fff , 1137px 1781px #fff , 1942px 777px #fff , 262px 454px #fff , 1811px 652px #fff , 496px 534px #fff , 741px 1174px #fff , 1829px 1894px #fff , 1287px 1638px #fff , 253px 1740px #fff , 322px 1002px #fff , 646px 783px #fff , 85px 881px #fff , 1564px 1446px #fff , 1108px 777px #fff , 791px 3px #fff , 621px 240px #fff , 1981px 11px #fff , 614px 83px #fff , 111px 1168px #fff , 1979px 1610px #fff , 119px 1568px #fff , 1707px 51px #fff , 609px 1000px #fff , 1370px 1646px #fff , 455px 833px #fff , 205px 1889px #fff , 1809px 1098px #fff , 430px 471px #fff , 1902px 662px #fff , 146px 466px #fff , 1174px 1679px #fff , 938px 849px #fff , 1720px 119px #fff , 509px 1345px #fff , 1783px 1057px #fff , 889px 1005px #fff , 657px 795px #fff , 317px 248px #fff , 944px 657px #fff , 964px 381px #fff , 1127px 1789px #fff , 1785px 597px #fff , 650px 117px #fff , 664px 430px #fff , 1884px 1130px #fff , 990px 1486px #fff , 343px 258px #fff , 1588px 1897px #fff , 96px 622px #fff , 1958px 657px #fff , 612px 641px #fff , 300px 758px #fff , 581px 1129px #fff , 1454px 206px #fff , 99px 227px #fff , 581px 1229px #fff , 1282px 1401px #fff , 1517px 996px #fff , 670px 873px #fff , 678px 1561px #fff , 552px 187px #fff , 1557px 1641px #fff , 1195px 987px #fff , 570px 739px #fff , 1710px 1668px #fff , 1762px 1768px #fff , 1635px 1874px #fff , 1280px 1657px #fff , 574px 1112px #fff , 1082px 1445px #fff , 725px 54px #fff , 892px 1838px #fff , 1488px 1236px #fff , 638px 172px #fff , 252px 1840px #fff , 816px 8px #fff , 983px 1298px #fff , 1787px 1478px #fff , 1071px 330px #fff , 1648px 647px #fff , 379px 1233px #fff , 1483px 711px #fff , 27px 418px #fff , 533px 1874px #fff , 1659px 1920px #fff , 1191px 151px #fff , 1047px 1601px #fff , 1961px 769px #fff , 1673px 324px #fff , 165px 733px #fff , 1445px 534px #fff , 1599px 1238px #fff , 34px 1627px #fff , 1404px 1244px #fff , 189px 316px #fff , 843px 378px #fff , 334px 1440px #fff , 1976px 1008px #fff , 1509px 242px #fff , 922px 1419px #fff , 266px 1909px #fff , 1866px 1091px #fff , 1092px 880px #fff , 1397px 1394px #fff , 1590px 1586px #fff , 1430px 1078px #fff , 1154px 434px #fff , 204px 195px #fff , 1574px 1409px #fff , 1145px 417px #fff , 1131px 353px #fff , 327px 448px #fff , 58px 631px #fff , 1226px 1873px #fff , 1033px 682px #fff , 1860px 572px #fff , 155px 601px #fff , 810px 274px #fff , 1057px 1946px #fff , 385px 353px #fff , 1470px 697px #fff , 507px 1760px #fff , 1825px 1936px #fff , 731px 968px #fff , 378px 1367px #fff , 1530px 30px #fff , 1179px 533px #fff , 1694px 48px #fff , 1784px 1816px #fff , 288px 1747px #fff , 1411px 1652px #fff , 780px 654px #fff , 615px 644px #fff , 1237px 1754px #fff , 1848px 415px #fff , 897px 948px #fff , 965px 1000px #fff , 1461px 973px #fff , 354px 469px #fff , 839px 1575px #fff , 1620px 544px #fff , 1378px 1745px #fff , 1884px 1580px #fff , 1386px 1638px #fff , 810px 622px #fff , 69px 315px #fff , 1882px 740px #fff , 319px 705px #fff , 19px 72px #fff , 796px 994px #fff , 1427px 361px #fff , 230px 1150px #fff , 1877px 1409px #fff , 780px 1541px #fff , 603px 1112px #fff , 1827px 1067px #fff , 323px 1475px #fff , 1609px 1442px #fff , 589px 1224px #fff , 1209px 1969px #fff , 1984px 1350px #fff , 1114px 558px #fff , 763px 612px #fff , 460px 1766px #fff , 597px 1965px #fff , 1405px 1890px #fff , 364px 1689px #fff , 1013px 1939px #fff , 1809px 1305px #fff , 1238px 159px #fff , 1115px 1963px #fff , 135px 400px #fff , 503px 1800px #fff , 1195px 1005px #fff , 1671px 554px #fff , 1236px 1188px #fff , 798px 146px #fff , 1455px 933px #fff , 660px 1259px #fff , 1096px 1088px #fff , 1147px 559px #fff , 886px 1071px #fff , 1131px 1595px #fff , 1004px 429px #fff , 948px 43px #fff , 1349px 1224px #fff , 1690px 530px #fff , 808px 269px #fff , 800px 321px #fff , 502px 778px #fff , 1344px 986px #fff , 1081px 1824px #fff , 690px 1416px #fff;
+  animation: animStar 50s linear infinite;
+}
+#stars:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 1300px 3086px #fff , 278px 1509px #fff , 69px 166px #fff , 1046px 390px #fff , 465px 413px #fff , 868px 1529px #fff , 62px 1891px #fff , 1243px 1838px #fff , 1650px 7px #fff , 124px 1049px #fff , 190px 1712px #fff , 1762px 1979px #fff , 308px 1891px #fff , 871px 1893px #fff , 595px 606px #fff , 13px 1668px #fff , 1px 311px #fff , 33px 795px #fff , 1706px 629px #fff , 750px 692px #fff , 1113px 1789px #fff , 1666px 317px #fff , 1406px 1055px #fff , 1199px 119px #fff , 646px 795px #fff , 1255px 1881px #fff , 1479px 1446px #fff , 63px 1234px #fff , 1316px 1399px #fff , 871px 141px #fff , 188px 1507px #fff , 1061px 895px #fff , 1874px 1368px #fff , 1340px 610px #fff , 1503px 851px #fff , 850px 317px #fff , 1238px 1561px #fff , 1700px 986px #fff , 585px 1288px #fff , 556px 1842px #fff , 989px 1280px #fff , 1225px 838px #fff , 310px 313px #fff , 1157px 925px #fff , 1208px 1212px #fff , 844px 1458px #fff , 1385px 1193px #fff , 50px 1525px #fff , 359px 1799px #fff , 1538px 1710px #fff , 737px 1570px #fff , 1181px 983px #fff , 1202px 177px #fff , 1038px 157px #fff , 1590px 644px #fff , 611px 1559px #fff , 1167px 1097px #fff , 260px 1834px #fff , 1470px 381px #fff , 816px 1149px #fff , 1275px 1448px #fff , 228px 1708px #fff , 1236px 1556px #fff , 1934px 1906px #fff , 37px 1594px #fff , 960px 843px #fff , 1474px 1228px #fff , 528px 396px #fff , 1794px 865px #fff , 1092px 1289px #fff , 1711px 980px #fff , 560px 1985px #fff , 401px 369px #fff , 1762px 1306px #fff , 967px 518px #fff , 1783px 422px #fff , 1847px 1148px #fff , 1745px 427px #fff , 1468px 997px #fff , 1371px 478px #fff , 908px 205px #fff , 298px 611px #fff , 1848px 286px #fff , 708px 140px #fff , 1214px 756px #fff , 335px 1447px #fff , 889px 1988px #fff , 1878px 1247px #fff , 871px 1582px #fff , 563px 36px #fff , 1024px 1162px #fff , 1116px 1118px #fff , 1760px 1899px #fff , 1583px 325px #fff , 148px 418px #fff , 1691px 45px #fff , 184px 941px #fff , 1456px 810px #fff , 931px 41px #fff , 86px 657px #fff , 609px 1378px #fff , 571px 1773px #fff , 1281px 1865px #fff , 1622px 1229px #fff , 52px 1203px #fff , 182px 548px #fff , 889px 1565px #fff , 216px 382px #fff , 432px 1336px #fff , 460px 751px #fff , 1708px 57px #fff , 1865px 432px #fff , 910px 121px #fff , 124px 1029px #fff , 1220px 939px #fff , 976px 655px #fff , 34px 1894px #fff , 1406px 1497px #fff , 1184px 346px #fff , 1723px 1514px #fff , 1086px 69px #fff , 1847px 1537px #fff , 201px 910px #fff , 718px 1315px #fff , 265px 933px #fff , 63px 1489px #fff , 1456px 1131px #fff , 860px 432px #fff , 575px 443px #fff , 1888px 725px #fff , 893px 377px #fff , 1945px 301px #fff , 984px 461px #fff , 298px 896px #fff , 1811px 807px #fff , 994px 1315px #fff , 291px 580px #fff , 1278px 859px #fff , 1310px 1326px #fff , 1400px 790px #fff , 497px 951px #fff , 636px 1367px #fff , 289px 225px #fff , 101px 631px #fff , 897px 7px #fff , 1751px 641px #fff , 824px 62px #fff , 788px 904px #fff , 1123px 171px #fff , 778px 1730px #fff , 597px 1277px #fff , 1981px 1960px #fff , 1941px 1240px #fff , 1145px 329px #fff , 268px 1428px #fff , 1752px 1787px #fff , 790px 1835px #fff , 98px 1567px #fff , 1973px 1056px #fff , 460px 639px #fff , 45px 1249px #fff , 1729px 1261px #fff , 424px 1426px #fff , 984px 1467px #fff , 1188px 217px #fff , 1559px 710px #fff , 60px 993px #fff , 1936px 768px #fff , 1126px 684px #fff , 346px 34px #fff , 1983px 1997px #fff , 229px 614px #fff , 1510px 1151px #fff , 1505px 611px #fff , 1848px 1325px #fff , 494px 525px #fff , 1236px 591px #fff , 825px 1003px #fff , 1450px 60px #fff , 1378px 197px #fff , 455px 1364px #fff , 915px 1825px #fff , 1426px 1903px #fff , 3px 590px #fff , 1891px 878px #fff , 378px 1949px #fff , 1003px 137px #fff , 1016px 179px #fff , 388px 1291px #fff , 1643px 912px #fff , 1153px 1648px #fff , 956px 1553px #fff , 327px 375px #fff , 224px 1613px #fff , 110px 187px #fff , 1599px 1166px #fff , 118px 828px #fff , 724px 1090px #fff , 1538px 99px #fff , 1917px 1184px #fff , 1677px 574px #fff , 613px 699px #fff , 268px 1824px #fff , 707px 1067px #fff , 123px 24px #fff , 1619px 1189px #fff , 939px 397px #fff , 388px 1162px #fff , 286px 299px #fff , 34px 1513px #fff , 1977px 1061px #fff , 1167px 697px #fff , 374px 444px #fff , 788px 512px #fff , 1224px 376px #fff , 654px 1104px #fff , 1603px 80px #fff , 127px 626px #fff , 970px 986px #fff , 952px 1578px #fff , 949px 1927px #fff , 754px 1892px #fff , 1567px 480px #fff , 921px 1737px #fff , 697px 1931px #fff , 1132px 1320px #fff , 878px 469px #fff , 141px 726px #fff , 1984px 6px #fff , 1907px 1814px #fff , 1054px 1949px #fff , 1313px 76px #fff , 1966px 1150px #fff , 918px 180px #fff , 650px 776px #fff , 640px 1757px #fff , 253px 590px #fff , 503px 947px #fff , 1471px 1813px #fff , 1916px 1792px #fff , 225px 1988px #fff , 395px 819px #fff , 965px 1080px #fff , 721px 1701px #fff , 557px 934px #fff , 1815px 1828px #fff , 1956px 1010px #fff , 964px 469px #fff , 1536px 383px #fff , 1229px 1412px #fff , 57px 926px #fff , 1454px 1158px #fff , 306px 401px #fff , 886px 195px #fff , 690px 795px #fff , 527px 1534px #fff , 508px 1110px #fff , 1000px 1551px #fff , 743px 942px #fff , 843px 608px #fff , 1013px 46px #fff , 93px 360px #fff , 1746px 111px #fff , 1215px 698px #fff , 221px 1693px #fff , 1087px 808px #fff , 1437px 278px #fff , 1861px 1871px #fff , 1223px 1576px #fff , 824px 1636px #fff , 364px 493px #fff , 173px 46px #fff , 1887px 105px #fff , 1361px 1652px #fff , 745px 540px #fff , 1599px 1508px #fff , 1781px 1478px #fff , 371px 1863px #fff , 863px 1320px #fff , 213px 1269px #fff , 1036px 1025px #fff , 21px 877px #fff , 1234px 468px #fff , 589px 1000px #fff , 1751px 657px #fff , 797px 902px #fff , 990px 1937px #fff , 1022px 230px #fff , 1236px 306px #fff , 672px 148px #fff , 606px 1529px #fff , 337px 762px #fff , 830px 573px #fff , 1566px 319px #fff , 1961px 1236px #fff , 1512px 664px #fff , 1044px 388px #fff , 1687px 1927px #fff , 1452px 1888px #fff , 665px 266px #fff , 711px 1238px #fff , 1673px 965px #fff , 1773px 1115px #fff , 236px 763px #fff , 1987px 1049px #fff , 1797px 341px #fff , 1801px 1478px #fff , 1164px 1532px #fff , 1607px 549px #fff , 51px 1181px #fff , 485px 982px #fff , 289px 1616px #fff , 497px 1357px #fff , 589px 1645px #fff , 1474px 1984px #fff , 1776px 845px #fff , 1610px 1829px #fff , 353px 816px #fff , 220px 1094px #fff , 101px 1486px #fff , 1296px 912px #fff , 410px 320px #fff , 1390px 981px #fff , 606px 47px #fff , 837px 1796px #fff , 1107px 1316px #fff , 94px 1262px #fff , 1397px 1328px #fff , 1332px 1282px #fff , 1390px 1904px #fff , 601px 1395px #fff , 1203px 125px #fff , 351px 1799px #fff , 1778px 1245px #fff , 1936px 1478px #fff , 794px 626px #fff , 425px 996px #fff , 422px 1866px #fff , 79px 1269px #fff , 540px 1684px #fff , 1103px 602px #fff , 584px 936px #fff , 759px 617px #fff , 1740px 81px #fff , 841px 589px #fff , 330px 1111px #fff , 904px 650px #fff , 1411px 1713px #fff , 1550px 939px #fff , 1620px 1836px #fff , 287px 469px #fff , 999px 795px #fff , 1801px 745px #fff , 888px 282px #fff , 191px 1382px #fff , 779px 922px #fff , 496px 1089px #fff , 1460px 143px #fff , 1479px 103px #fff , 1181px 590px #fff , 1444px 889px #fff , 583px 873px #fff , 428px 1307px #fff , 1571px 1992px #fff , 1623px 1208px #fff , 34px 1500px #fff , 699px 1921px #fff , 1221px 606px #fff , 1365px 1214px #fff , 18px 1033px #fff , 1889px 1501px #fff , 366px 1786px #fff , 1710px 610px #fff , 1412px 242px #fff , 1821px 1593px #fff , 1596px 617px #fff , 1845px 1447px #fff , 1129px 1319px #fff , 1453px 1872px #fff , 1514px 1821px #fff , 755px 538px #fff , 404px 1786px #fff , 1922px 1565px #fff , 1693px 29px #fff , 460px 1119px #fff , 442px 423px #fff , 832px 475px #fff , 1087px 281px #fff , 1471px 923px #fff , 676px 877px #fff , 197px 1915px #fff , 941px 1652px #fff , 1093px 1741px #fff , 1060px 1713px #fff , 1174px 745px #fff , 621px 1067px #fff , 1990px 442px #fff , 841px 982px #fff , 637px 1763px #fff , 1002px 206px #fff , 1394px 1268px #fff , 801px 204px #fff , 347px 686px #fff , 1278px 283px #fff , 1723px 1856px #fff , 1472px 148px #fff , 1303px 697px #fff , 850px 1504px #fff , 965px 114px #fff , 1234px 179px #fff , 928px 656px #fff , 1618px 745px #fff , 1691px 4px #fff , 38px 1983px #fff , 811px 1727px #fff , 264px 1607px #fff , 166px 195px #fff , 675px 357px #fff , 1677px 805px #fff , 1813px 127px #fff , 29px 1449px #fff , 65px 1761px #fff , 1815px 1961px #fff , 1660px 413px #fff , 602px 315px #fff , 643px 956px #fff , 174px 548px #fff , 1922px 1763px #fff , 580px 1700px #fff , 863px 927px #fff , 591px 427px #fff , 1395px 1215px #fff , 181px 1178px #fff , 670px 1266px #fff , 1350px 1448px #fff , 1939px 1768px #fff , 1213px 1499px #fff , 1815px 1390px #fff , 165px 1749px #fff , 722px 902px #fff , 1681px 17px #fff , 1573px 528px #fff , 1347px 541px #fff , 1538px 672px #fff , 1094px 28px #fff , 442px 43px #fff , 1381px 430px #fff , 1492px 1078px #fff , 420px 1370px #fff , 746px 827px #fff , 1483px 1165px #fff , 561px 518px #fff , 691px 989px #fff , 1714px 1782px #fff , 800px 1215px #fff , 1051px 639px #fff , 1642px 957px #fff , 866px 1285px #fff , 1896px 448px #fff , 441px 1301px #fff , 1359px 1158px #fff , 556px 564px #fff , 1112px 1339px #fff , 1569px 1018px #fff , 1986px 999px #fff , 1578px 1027px #fff , 47px 1403px #fff , 954px 498px #fff , 787px 1720px #fff , 1016px 1202px #fff , 1459px 1517px #fff , 442px 170px #fff , 1167px 1466px #fff , 1096px 658px #fff , 867px 1935px #fff , 425px 1930px #fff , 1647px 748px #fff , 566px 1898px #fff , 325px 942px #fff , 1650px 1298px #fff , 971px 110px #fff , 903px 937px #fff , 312px 388px #fff , 463px 1538px #fff , 1315px 1598px #fff , 1251px 1767px #fff , 527px 503px #fff , 68px 1926px #fff , 45px 1690px #fff , 501px 712px #fff , 925px 1803px #fff , 446px 187px #fff , 1484px 1047px #fff , 1108px 1963px #fff , 1150px 1770px #fff , 1586px 1581px #fff , 1282px 1119px #fff , 753px 32px #fff , 33px 1928px #fff , 1818px 1895px #fff , 1973px 997px #fff , 1170px 602px #fff , 630px 1311px #fff , 1369px 1964px #fff , 1423px 1945px #fff , 686px 1197px #fff , 1861px 113px #fff , 1137px 1781px #fff , 1942px 777px #fff , 262px 454px #fff , 1811px 652px #fff , 496px 534px #fff , 741px 1174px #fff , 1829px 1894px #fff , 1287px 1638px #fff , 253px 1740px #fff , 322px 1002px #fff , 646px 783px #fff , 85px 881px #fff , 1564px 1446px #fff , 1108px 777px #fff , 791px 3px #fff , 621px 240px #fff , 1981px 11px #fff , 614px 83px #fff , 111px 1168px #fff , 1979px 1610px #fff , 119px 1568px #fff , 1707px 51px #fff , 609px 1000px #fff , 1370px 1646px #fff , 455px 833px #fff , 205px 1889px #fff , 1809px 1098px #fff , 430px 471px #fff , 1902px 662px #fff , 146px 466px #fff , 1174px 1679px #fff , 938px 849px #fff , 1720px 119px #fff , 509px 1345px #fff , 1783px 1057px #fff , 889px 1005px #fff , 657px 795px #fff , 317px 248px #fff , 944px 657px #fff , 964px 381px #fff , 1127px 1789px #fff , 1785px 597px #fff , 650px 117px #fff , 664px 430px #fff , 1884px 1130px #fff , 990px 1486px #fff , 343px 258px #fff , 1588px 1897px #fff , 96px 622px #fff , 1958px 657px #fff , 612px 641px #fff , 300px 758px #fff , 581px 1129px #fff , 1454px 206px #fff , 99px 227px #fff , 581px 1229px #fff , 1282px 1401px #fff , 1517px 996px #fff , 670px 873px #fff , 678px 1561px #fff , 552px 187px #fff , 1557px 1641px #fff , 1195px 987px #fff , 570px 739px #fff , 1710px 1668px #fff , 1762px 1768px #fff , 1635px 1874px #fff , 1280px 1657px #fff , 574px 1112px #fff , 1082px 1445px #fff , 725px 54px #fff , 892px 1838px #fff , 1488px 1236px #fff , 638px 172px #fff , 252px 1840px #fff , 816px 8px #fff , 983px 1298px #fff , 1787px 1478px #fff , 1071px 330px #fff , 1648px 647px #fff , 379px 1233px #fff , 1483px 711px #fff , 27px 418px #fff , 533px 1874px #fff , 1659px 1920px #fff , 1191px 151px #fff , 1047px 1601px #fff , 1961px 769px #fff , 1673px 324px #fff , 165px 733px #fff , 1445px 534px #fff , 1599px 1238px #fff , 34px 1627px #fff , 1404px 1244px #fff , 189px 316px #fff , 843px 378px #fff , 334px 1440px #fff , 1976px 1008px #fff , 1509px 242px #fff , 922px 1419px #fff , 266px 1909px #fff , 1866px 1091px #fff , 1092px 880px #fff , 1397px 1394px #fff , 1590px 1586px #fff , 1430px 1078px #fff , 1154px 434px #fff , 204px 195px #fff , 1574px 1409px #fff , 1145px 417px #fff , 1131px 353px #fff , 327px 448px #fff , 58px 631px #fff , 1226px 1873px #fff , 1033px 682px #fff , 1860px 572px #fff , 155px 601px #fff , 810px 274px #fff , 1057px 1946px #fff , 385px 353px #fff , 1470px 697px #fff , 507px 1760px #fff , 1825px 1936px #fff , 731px 968px #fff , 378px 1367px #fff , 1530px 30px #fff , 1179px 533px #fff , 1694px 48px #fff , 1784px 1816px #fff , 288px 1747px #fff , 1411px 1652px #fff , 780px 654px #fff , 615px 644px #fff , 1237px 1754px #fff , 1848px 415px #fff , 897px 948px #fff , 965px 1000px #fff , 1461px 973px #fff , 354px 469px #fff , 839px 1575px #fff , 1620px 544px #fff , 1378px 1745px #fff , 1884px 1580px #fff , 1386px 1638px #fff , 810px 622px #fff , 69px 315px #fff , 1882px 740px #fff , 319px 705px #fff , 19px 72px #fff , 796px 994px #fff , 1427px 361px #fff , 230px 1150px #fff , 1877px 1409px #fff , 780px 1541px #fff , 603px 1112px #fff , 1827px 1067px #fff , 323px 1475px #fff , 1609px 1442px #fff , 589px 1224px #fff , 1209px 1969px #fff , 1984px 1350px #fff , 1114px 558px #fff , 763px 612px #fff , 460px 1766px #fff , 597px 1965px #fff , 1405px 1890px #fff , 364px 1689px #fff , 1013px 1939px #fff , 1809px 1305px #fff , 1238px 159px #fff , 1115px 1963px #fff , 135px 400px #fff , 503px 1800px #fff , 1195px 1005px #fff , 1671px 554px #fff , 1236px 1188px #fff , 798px 146px #fff , 1455px 933px #fff , 660px 1259px #fff , 1096px 1088px #fff , 1147px 559px #fff , 886px 1071px #fff , 1131px 1595px #fff , 1004px 429px #fff , 948px 43px #fff , 1349px 1224px #fff , 1690px 530px #fff , 808px 269px #fff , 800px 321px #fff , 502px 778px #fff , 1344px 986px #fff , 1081px 1824px #fff , 690px 1416px #fff;
+}
+
+#stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 1535px 15827px #fff , 1275px 407px #fff , 1325px 1074px #fff , 478px 7px #fff , 23px 1770px #fff , 1363px 847px #fff , 600px 1339px #fff , 1983px 1281px #fff , 206px 242px #fff , 407px 1589px #fff , 10px 650px #fff , 1678px 917px #fff , 816px 416px #fff , 638px 1337px #fff , 289px 1028px #fff , 205px 1057px #fff , 290px 531px #fff , 284px 122px #fff , 484px 1982px #fff , 235px 1654px #fff , 69px 1568px #fff , 1407px 1214px #fff , 1216px 632px #fff , 213px 1220px #fff , 126px 1228px #fff , 796px 1519px #fff , 1245px 93px #fff , 1404px 1198px #fff , 613px 1840px #fff , 469px 997px #fff , 1784px 1740px #fff , 1586px 610px #fff , 206px 1285px #fff , 1698px 462px #fff , 474px 1112px #fff , 515px 548px #fff , 1695px 1209px #fff , 267px 1056px #fff , 498px 627px #fff , 1396px 1003px #fff , 889px 856px #fff , 635px 781px #fff , 1256px 302px #fff , 1565px 369px #fff , 34px 1419px #fff , 174px 1610px #fff , 1559px 1339px #fff , 1021px 1968px #fff , 275px 1500px #fff , 759px 1238px #fff , 907px 124px #fff , 193px 1088px #fff , 1294px 1853px #fff , 217px 679px #fff , 115px 1368px #fff , 200px 420px #fff , 1481px 1638px #fff , 265px 927px #fff , 1568px 625px #fff , 526px 1065px #fff , 692px 82px #fff , 1466px 1483px #fff , 1170px 128px #fff , 1837px 1409px #fff , 1046px 535px #fff , 1822px 1788px #fff , 1969px 90px #fff , 917px 811px #fff , 1046px 1629px #fff , 726px 867px #fff , 115px 689px #fff , 1068px 1680px #fff , 690px 124px #fff , 280px 500px #fff , 1145px 14px #fff , 1463px 1500px #fff , 1601px 636px #fff , 82px 1326px #fff , 164px 624px #fff , 853px 129px #fff , 404px 1719px #fff , 1952px 1170px #fff , 134px 369px #fff , 371px 158px #fff , 1378px 1404px #fff , 549px 504px #fff , 1774px 769px #fff , 188px 542px #fff , 1510px 506px #fff , 1479px 451px #fff , 1643px 27px #fff , 703px 1531px #fff , 1587px 1894px #fff , 1818px 1447px #fff , 1681px 1707px #fff , 1241px 410px #fff , 1204px 92px #fff , 653px 654px #fff , 492px 1979px #fff , 1693px 1709px #fff , 203px 1340px #fff , 309px 249px #fff , 1084px 233px #fff , 1453px 527px #fff , 838px 1563px #fff , 385px 1602px #fff , 162px 1335px #fff , 1324px 1991px #fff , 23px 853px #fff , 73px 321px #fff , 156px 1876px #fff , 1928px 910px #fff , 985px 1154px #fff , 355px 787px #fff , 1858px 655px #fff , 678px 1284px #fff , 1755px 1952px #fff , 1687px 680px #fff , 138px 1660px #fff , 1220px 1304px #fff , 962px 1150px #fff , 1176px 388px #fff , 1935px 1939px #fff , 760px 772px #fff , 451px 820px #fff , 268px 485px #fff , 989px 1470px #fff , 1647px 1020px #fff , 1428px 707px #fff , 1953px 1086px #fff , 738px 1809px #fff , 833px 1845px #fff , 1285px 187px #fff , 784px 1720px #fff , 137px 69px #fff , 1768px 863px #fff , 1023px 1085px #fff , 1848px 1270px #fff , 1207px 1584px #fff , 1037px 430px #fff , 496px 1369px #fff , 1646px 1346px #fff , 31px 1098px #fff , 942px 1799px #fff , 1652px 158px #fff , 366px 1617px #fff , 578px 1539px #fff , 1001px 1588px #fff , 1299px 1884px #fff , 1963px 1115px #fff , 752px 761px #fff , 706px 1980px #fff , 163px 382px #fff , 348px 1975px #fff , 1817px 1838px #fff , 1377px 1406px #fff , 1966px 1636px #fff , 1742px 983px #fff , 422px 1536px #fff , 1592px 891px #fff , 691px 925px #fff , 1184px 1402px #fff , 1080px 41px #fff , 530px 507px #fff , 1791px 1941px #fff , 854px 1266px #fff , 1345px 1452px #fff , 299px 1883px #fff , 1723px 958px #fff , 750px 1353px #fff , 1265px 98px #fff , 909px 226px #fff , 1996px 348px #fff , 378px 520px #fff , 554px 1881px #fff , 542px 396px #fff , 1260px 1688px #fff , 1693px 370px #fff , 736px 1098px #fff , 1842px 1069px #fff , 59px 435px #fff , 651px 1557px #fff , 81px 526px #fff , 1097px 1018px #fff , 1708px 230px #fff , 281px 117px #fff , 1935px 2px #fff , 98px 436px #fff , 1715px 1206px #fff , 1866px 1836px #fff , 890px 78px #fff , 1690px 497px #fff , 1931px 689px #fff , 355px 1567px #fff , 1496px 1212px #fff , 686px 1359px #fff , 763px 1092px #fff , 711px 832px #fff , 1020px 1971px #fff , 550px 465px #fff;
+  animation: animStar 100s linear infinite;
+}
+#stars2:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 1535px 15827px #fff , 1275px 407px #fff , 1325px 1074px #fff , 478px 7px #fff , 23px 1770px #fff , 1363px 847px #fff , 600px 1339px #fff , 1983px 1281px #fff , 206px 242px #fff , 407px 1589px #fff , 10px 650px #fff , 1678px 917px #fff , 816px 416px #fff , 638px 1337px #fff , 289px 1028px #fff , 205px 1057px #fff , 290px 531px #fff , 284px 122px #fff , 484px 1982px #fff , 235px 1654px #fff , 69px 1568px #fff , 1407px 1214px #fff , 1216px 632px #fff , 213px 1220px #fff , 126px 1228px #fff , 796px 1519px #fff , 1245px 93px #fff , 1404px 1198px #fff , 613px 1840px #fff , 469px 997px #fff , 1784px 1740px #fff , 1586px 610px #fff , 206px 1285px #fff , 1698px 462px #fff , 474px 1112px #fff , 515px 548px #fff , 1695px 1209px #fff , 267px 1056px #fff , 498px 627px #fff , 1396px 1003px #fff , 889px 856px #fff , 635px 781px #fff , 1256px 302px #fff , 1565px 369px #fff , 34px 1419px #fff , 174px 1610px #fff , 1559px 1339px #fff , 1021px 1968px #fff , 275px 1500px #fff , 759px 1238px #fff , 907px 124px #fff , 193px 1088px #fff , 1294px 1853px #fff , 217px 679px #fff , 115px 1368px #fff , 200px 420px #fff , 1481px 1638px #fff , 265px 927px #fff , 1568px 625px #fff , 526px 1065px #fff , 692px 82px #fff , 1466px 1483px #fff , 1170px 128px #fff , 1837px 1409px #fff , 1046px 535px #fff , 1822px 1788px #fff , 1969px 90px #fff , 917px 811px #fff , 1046px 1629px #fff , 726px 867px #fff , 115px 689px #fff , 1068px 1680px #fff , 690px 124px #fff , 280px 500px #fff , 1145px 14px #fff , 1463px 1500px #fff , 1601px 636px #fff , 82px 1326px #fff , 164px 624px #fff , 853px 129px #fff , 404px 1719px #fff , 1952px 1170px #fff , 134px 369px #fff , 371px 158px #fff , 1378px 1404px #fff , 549px 504px #fff , 1774px 769px #fff , 188px 542px #fff , 1510px 506px #fff , 1479px 451px #fff , 1643px 27px #fff , 703px 1531px #fff , 1587px 1894px #fff , 1818px 1447px #fff , 1681px 1707px #fff , 1241px 410px #fff , 1204px 92px #fff , 653px 654px #fff , 492px 1979px #fff , 1693px 1709px #fff , 203px 1340px #fff , 309px 249px #fff , 1084px 233px #fff , 1453px 527px #fff , 838px 1563px #fff , 385px 1602px #fff , 162px 1335px #fff , 1324px 1991px #fff , 23px 853px #fff , 73px 321px #fff , 156px 1876px #fff , 1928px 910px #fff , 985px 1154px #fff , 355px 787px #fff , 1858px 655px #fff , 678px 1284px #fff , 1755px 1952px #fff , 1687px 680px #fff , 138px 1660px #fff , 1220px 1304px #fff , 962px 1150px #fff , 1176px 388px #fff , 1935px 1939px #fff , 760px 772px #fff , 451px 820px #fff , 268px 485px #fff , 989px 1470px #fff , 1647px 1020px #fff , 1428px 707px #fff , 1953px 1086px #fff , 738px 1809px #fff , 833px 1845px #fff , 1285px 187px #fff , 784px 1720px #fff , 137px 69px #fff , 1768px 863px #fff , 1023px 1085px #fff , 1848px 1270px #fff , 1207px 1584px #fff , 1037px 430px #fff , 496px 1369px #fff , 1646px 1346px #fff , 31px 1098px #fff , 942px 1799px #fff , 1652px 158px #fff , 366px 1617px #fff , 578px 1539px #fff , 1001px 1588px #fff , 1299px 1884px #fff , 1963px 1115px #fff , 752px 761px #fff , 706px 1980px #fff , 163px 382px #fff , 348px 1975px #fff , 1817px 1838px #fff , 1377px 1406px #fff , 1966px 1636px #fff , 1742px 983px #fff , 422px 1536px #fff , 1592px 891px #fff , 691px 925px #fff , 1184px 1402px #fff , 1080px 41px #fff , 530px 507px #fff , 1791px 1941px #fff , 854px 1266px #fff , 1345px 1452px #fff , 299px 1883px #fff , 1723px 958px #fff , 750px 1353px #fff , 1265px 98px #fff , 909px 226px #fff , 1996px 348px #fff , 378px 520px #fff , 554px 1881px #fff , 542px 396px #fff , 1260px 1688px #fff , 1693px 370px #fff , 736px 1098px #fff , 1842px 1069px #fff , 59px 435px #fff , 651px 1557px #fff , 81px 526px #fff , 1097px 1018px #fff , 1708px 230px #fff , 281px 117px #fff , 1935px 2px #fff , 98px 436px #fff , 1715px 1206px #fff , 1866px 1836px #fff , 890px 78px #fff , 1690px 497px #fff , 1931px 689px #fff , 355px 1567px #fff , 1496px 1212px #fff , 686px 1359px #fff , 763px 1092px #fff , 711px 832px #fff , 1020px 1971px #fff , 550px 465px #fff;
+}
+
+#stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 1894px 18323px #fff , 1653px 1049px #fff , 1264px 1794px #fff , 1389px 1438px #fff , 754px 55px #fff , 14px 593px #fff , 934px 1852px #fff , 995px 730px #fff , 162px 1941px #fff , 1076px 1229px #fff , 1319px 239px #fff , 1922px 220px #fff , 1824px 681px #fff , 1635px 1306px #fff , 477px 1752px #fff , 1729px 1466px #fff , 1647px 311px #fff , 1647px 1517px #fff , 1053px 644px #fff , 1773px 121px #fff , 903px 45px #fff , 12px 914px #fff , 1484px 1083px #fff , 1749px 157px #fff , 81px 213px #fff , 1950px 1348px #fff , 117px 1865px #fff , 171px 1526px #fff , 851px 1287px #fff , 1015px 630px #fff , 1299px 769px #fff , 48px 985px #fff , 1642px 1716px #fff , 612px 1543px #fff , 220px 1328px #fff , 628px 1989px #fff , 853px 1741px #fff , 11px 1795px #fff , 984px 714px #fff , 1100px 105px #fff , 737px 766px #fff , 1149px 1209px #fff , 787px 1264px #fff , 925px 522px #fff , 1987px 1990px #fff , 1995px 1203px #fff , 955px 422px #fff , 739px 1732px #fff , 1450px 1392px #fff , 1354px 47px #fff , 185px 294px #fff , 1678px 397px #fff , 1975px 1647px #fff , 1604px 863px #fff , 849px 1734px #fff , 364px 1197px #fff , 642px 259px #fff , 1586px 1412px #fff , 842px 379px #fff , 1922px 38px #fff , 1479px 326px #fff , 860px 85px #fff , 1352px 345px #fff , 329px 1267px #fff , 1622px 1702px #fff , 1932px 250px #fff , 1258px 52px #fff , 1691px 1852px #fff , 1971px 1541px #fff , 1876px 1831px #fff , 1420px 676px #fff , 162px 772px #fff , 1621px 414px #fff , 1746px 1467px #fff , 1621px 66px #fff , 1018px 1950px #fff , 134px 366px #fff , 1372px 1207px #fff , 721px 280px #fff , 1073px 1729px #fff , 1947px 115px #fff , 1705px 571px #fff , 761px 852px #fff , 1217px 1335px #fff , 1191px 1935px #fff , 1982px 1676px #fff , 501px 410px #fff , 1526px 697px #fff , 712px 821px #fff , 765px 251px #fff , 1532px 1647px #fff , 748px 455px #fff , 710px 1583px #fff , 1019px 460px #fff , 871px 53px #fff , 1713px 278px #fff , 985px 356px #fff , 182px 21px #fff , 650px 1116px #fff , 1084px 250px #fff;
+  animation: animStar 150s linear infinite;
+}
+#stars3:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 1894px 18323px #fff , 1653px 1049px #fff , 1264px 1794px #fff , 1389px 1438px #fff , 754px 55px #fff , 14px 593px #fff , 934px 1852px #fff , 995px 730px #fff , 162px 1941px #fff , 1076px 1229px #fff , 1319px 239px #fff , 1922px 220px #fff , 1824px 681px #fff , 1635px 1306px #fff , 477px 1752px #fff , 1729px 1466px #fff , 1647px 311px #fff , 1647px 1517px #fff , 1053px 644px #fff , 1773px 121px #fff , 903px 45px #fff , 12px 914px #fff , 1484px 1083px #fff , 1749px 157px #fff , 81px 213px #fff , 1950px 1348px #fff , 117px 1865px #fff , 171px 1526px #fff , 851px 1287px #fff , 1015px 630px #fff , 1299px 769px #fff , 48px 985px #fff , 1642px 1716px #fff , 612px 1543px #fff , 220px 1328px #fff , 628px 1989px #fff , 853px 1741px #fff , 11px 1795px #fff , 984px 714px #fff , 1100px 105px #fff , 737px 766px #fff , 1149px 1209px #fff , 787px 1264px #fff , 925px 522px #fff , 1987px 1990px #fff , 1995px 1203px #fff , 955px 422px #fff , 739px 1732px #fff , 1450px 1392px #fff , 1354px 47px #fff , 185px 294px #fff , 1678px 397px #fff , 1975px 1647px #fff , 1604px 863px #fff , 849px 1734px #fff , 364px 1197px #fff , 642px 259px #fff , 1586px 1412px #fff , 842px 379px #fff , 1922px 38px #fff , 1479px 326px #fff , 860px 85px #fff , 1352px 345px #fff , 329px 1267px #fff , 1622px 1702px #fff , 1932px 250px #fff , 1258px 52px #fff , 1691px 1852px #fff , 1971px 1541px #fff , 1876px 1831px #fff , 1420px 676px #fff , 162px 772px #fff , 1621px 414px #fff , 1746px 1467px #fff , 1621px 66px #fff , 1018px 1950px #fff , 134px 366px #fff , 1372px 1207px #fff , 721px 280px #fff , 1073px 1729px #fff , 1947px 115px #fff , 1705px 571px #fff , 761px 852px #fff , 1217px 1335px #fff , 1191px 1935px #fff , 1982px 1676px #fff , 501px 410px #fff , 1526px 697px #fff , 712px 821px #fff , 765px 251px #fff , 1532px 1647px #fff , 748px 455px #fff , 710px 1583px #fff , 1019px 460px #fff , 871px 53px #fff , 1713px 278px #fff , 985px 356px #fff , 182px 21px #fff , 650px 1116px #fff , 1084px 250px #fff;
+}
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+/**************************************************
+		6.  About Me Section CSS			
+**************************************************/
+.about_me_section{
+    padding-top: 80px;
+    margin-bottom: 80px;
+    padding-left: 15px;
+    padding-right: 15px;
+	background: #fff;
+}
+.about_me h3{
+	font-family: 'Lora', serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+	margin-bottom: 45px;
+}
+a.resume_button{
+	font-size: 15px;
+    margin-top: 30px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    padding: 15px 25px;
+    letter-spacing: 0.5px;
+    background-color: #feea0e;
+    font-weight: 700;
+    color: #000;
+    border: 0px solid #feea0e;
+    border-radius: 1px;	
+    box-shadow: inset 0 0 0 0 #feea0e;	
+	-webkit-transition: all ease 0.8s;
+	 -moz-transition: all ease 0.8s;
+	  transition: all ease 0.8s;	
+ }
+a.resume_button:hover{
+	box-shadow: inset 0 -100px 0 0 #000;
+	color: #fff;		
+}
+a.contact_button{
+ 	font-size: 15px;
+    margin-top: 30px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    padding: 13px 35px;
+    letter-spacing: 0.5px;
+    background-color: #fff;
+    font-weight: 700;
+    border: 2px solid #feea0e;
+    border-radius: inherit;
+    color: #222222;
+    box-shadow: inset 0 0 0 0 #feea0e;
+	transition: all ease 0.8s;
+	 -webkit-transition: all ease 0.8s;
+	  -moz-transition: all ease 0.8s;		
+}
+a.contact_button:hover{	
+	box-shadow: inset 0 -100px 0 0 #feea0e;
+	color: #000;
+    border: 2px solid #feea0e;
+    border-radius: 1px;		
+ }
+
+/**************************************************
+		7.  Skill Part Section CSS			
+**************************************************/
+.skills_part{}
+.skills_part h3{
+	font-family: 'Lora', serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+	margin-bottom: 45px;
+}
+.skill_progress{
+	margin-bottom: 36px;
+}
+.skill_progress span{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+    font-size: 12px;
+	font-style: normal;
+	text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+span.percent_text{
+    position: absolute;
+    margin-top: -34px;
+    right: 20px;
+}
+.progress-bar {
+    background-color: #feea0e;
+    border-radius: none;
+    height: 8px;
+	transition-duration: 3s;
+}
+.progress {
+    height: 7px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    -webkit-box-shadow: none !important; 
+	border-radius: 1px !important;
+}
+/**************************************************
+		8.  Counter Section CSS			
+**************************************************/
+.counter_part{
+    margin-top: 80px;
+}
+.sinlge_counter{
+    text-align: center;
+	animation-delay: 0.6s;
+    animation-name: fadeInDown;
+}
+.sinlge_counter i{
+    font-size: 20px;
+    color: #bfbfbf;
+	font-weight: 500;
+    padding-bottom: 30px;	
+}
+span.counter{
+    font-size: 35px;
+	color: #222222;
+}
+.sinlge_counter h6{
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-style: normal;
+    font-weight: 400;
+	padding-top: 0px;
+	letter-spacing: 1px;
+}
+/**************************************************
+		9.  Service Section CSS			
+**************************************************/
+.service_section{}
+.service_part{
+	background: #f7f7f7;
+    padding-bottom: 80px;
+	padding-top: 80px;
+}
+.service_header{
+	margin-bottom: 60px;
+	text-align: center;
+}
+.service_header h4{	
+	font-family: 'PT Serif', serif;
+    line-height: 30px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -.3px;
+}
+.service_header h2{
+    font-family: 'Lora', serif;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 60px;
+    margin-top: 0px;
+}
+.service_item{
+	margin-bottom: 20px;
+}
+.single_service_item {
+    background: #fff;
+	padding: 55px 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	 -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.single_service_item:hover {
+	transition: all 0.5s ease-in-out 0s;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	 -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+i.icon_top {
+    font-size: 60px;
+    margin-bottom: 25px;
+    border: 1px solid #feea0e;
+    padding: 20px;
+    border-radius: 50px;
+    background: #fff;
+}
+.single_service_item:hover i.icon_top{
+    border: 1px solid #feea0e; 
+	color: #feea0e;
+	-webkit-transition: all 0.5s ease-in-out 0s;
+	 -moz-transition: all 0.5s ease-in-out 0s;
+	   transition: all 0.5s ease-in-out 0s;	
+}
+i.icon_bottom{
+    color: #feea0e;
+}
+.single_service_item h5{
+	font-family: 'Lora', serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+	text-transform: uppercase;
+}
+.single_service_item p {
+    font-size: 15px;
+    letter-spacing: .5px;
+    font-weight: 400;
+}
+/**************************************************
+		10.  Hire Section CSS			
+**************************************************/
+.hire_section{}
+.hire_part{
+	background: #fff;
+    text-align: center;
+    padding-top: 93px;
+    padding-bottom: 100px;
+}
+.hire_part h2{
+	font-family: 'Lora', serif;
+    font-weight: 900;	
+	font-style: normal;
+	letter-spacing: 1px;
+    margin-top: 0px;	
+    margin-bottom: 20px;	
+}
+.hire_part h6 {
+	font-family: 'PT Serif', serif;
+	font-style: italic;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+}
+a.hire_button {
+	font-size: 15px;
+    margin-top: 25px;
+    padding: 14px 40px;
+    letter-spacing: 0.5px;
+    background-color: #feea0e;
+    font-weight: 700;
+    color: #000;
+    border: 0px solid #feea0e;
+    border-radius: inherit;	
+    box-shadow: inset 0 0 0 0 #feea0e;
+	-webkit-transition: all ease 0.8s;
+	 -moz-transition: all ease 0.8s;
+	  transition: all ease 0.8s;	
+}
+a.hire_button:hover{
+	box-shadow: inset 0 -100px 0 0 #000;
+	color: #fff;
+    border: 0px solid #000;
+    border-radius: inherit;
+ }
+/**************************************************
+		11.  Resume Section CSS			
+**************************************************/
+.resume_section{
+    margin-top:0px;
+}
+.resume_part{
+	background: #f7f7f7;
+	padding-top: 80px;
+}
+.resume_header {
+    text-align: center;
+}
+.resume_header  h4{
+	font-family: 'PT Serif', serif;
+    line-height: 30px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -.3px;
+}
+.resume_header  h2{
+    font-family: 'Lora', serif;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 60px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+/**************************************************
+		11.1 Timeline CSS
+**************************************************/
+
+.timeline_body {
+    margin-top: 60px;
+}
+.timeline {
+    list-style: none;
+    padding: 10px 0;
+    position: relative;
+    font-weight: 300;
+}
+.timeline:before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content:" ";
+    width: 2px;
+    background: #eeeeee;
+    left: 50%;
+    margin-left: -1.5px;
+}
+.timeline > li {
+    margin-bottom: 20px;
+    position: relative;
+    width: 50%;
+    float: left;
+    clear: left;
+}
+.timeline > li:before, .timeline > li:after {
+    content:" ";
+    display: table;
+}
+.timeline > li:after {
+    clear: both;
+}
+.timeline > li:before, .timeline > li:after {
+    content:" ";
+    display: table;
+}
+.timeline > li:after {
+    clear: both;
+}
+.timeline > li > .timeline-panel {
+    width: calc(100% - 40px);
+    width: -moz-calc(100% - 40px);
+    width: -webkit-calc(100% - 40px);
+    float: left;
+    border: 1px solid #dcdcdc;
+    background: #ffffff;
+    position: relative;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.timeline > li > .timeline-panel:before {
+    position: absolute;
+    top: 26px;
+    right: -15px;
+    display: inline-block;
+    border-top: 15px solid transparent;
+    border-left: 15px solid #dcdcdc;
+    border-right: 0 solid #dcdcdc;
+    border-bottom: 15px solid transparent;
+    content:" ";
+}
+.timeline > li > .timeline-panel:after {
+    position: absolute;
+    top: 27px;
+    right: -14px;
+    display: inline-block;
+    border-top: 14px solid transparent;
+    border-left: 14px solid #ffffff;
+    border-right: 0 solid #ffffff;
+    border-bottom: 14px solid transparent;
+    content:" ";
+}
+.timeline > li > .timeline-badge {
+    color: #ffffff;
+    width: 24px;
+    height: 24px;
+    line-height: 50px;
+    text-align: center;
+    position: absolute;
+    top: 16px;
+    right: -12px;
+    z-index: 100;
+}
+.timeline > li.timeline-inverted > .timeline-panel {
+    float: right;
+}
+.timeline > li.timeline-inverted > .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+}
+.timeline > li.timeline-inverted > .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+}
+.timeline-badge > a {
+    color: #eeeeee !important;	
+    font-size: 16px;
+}
+.timeline-badge a:hover {
+    color: #feea0e !important;
+	transition: all 0.5s ease-in-out 0s;
+}
+.timeline-title {
+    margin-top: 0;
+    color: inherit;
+}
+.timeline-heading h4 {
+	font-family: 'Lora', serif;
+    padding: 0 15px;
+	padding-top: 10px;
+	font-weight: 700;
+}
+.timeline-body > p, .timeline-body > ul {
+    padding: 10px 15px;
+    margin-bottom: 0;
+}
+.timeline-footer {
+    padding: 5px 15px;
+    background-color:#eeeeee;
+}
+.timeline-footer p { margin-bottom: 0; }
+.timeline-footer > a {
+    cursor: pointer;
+    text-decoration: none;
+}
+span.company_name i{
+	font-weight: 400;
+}
+span.company_name i:hover{
+	color: #feea0e;
+	transition: all 0.5s ease-in-out 0s;
+}
+span.company_name{
+	float: left;
+}
+.timeline > li.timeline-inverted {
+    float: right;
+    clear: right;
+}
+.timeline > li:nth-child(2) {
+    margin-top: 60px;
+}
+.timeline > li.timeline-inverted > .timeline-badge {
+    left: -12px;
+}
+.no-float {
+    float: none !important;
+}
+
+/*************************************************
+	    12.  Portfolio Section CSS
+**************************************************/
+.portfolio-section{
+	padding-bottom: 80px;
+}
+.portfolio_part{
+	background: #fff;
+	text-align: center;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 80px;
+	padding-bottom: 50px;
+}
+.portfolio_header{}
+.portfolio_header h4{
+	font-family: 'PT Serif', serif;
+    line-height: 30px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -.3px;
+}
+.portfolio_header h2{
+    font-family: 'Lora', serif;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 60px;
+    margin-top: 0px;
+	margin-bottom: 15px;
+}
+ul.work {
+    padding: 0;
+    list-style: none;
+    margin-left: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ul.work li {
+    display: inline-block;
+    margin: 0 8px;
+    text-transform: uppercase;
+    font-size: 14px;
+	letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+}
+ul.work li.active{
+    position: relative;
+}
+ul.work li.active:before{
+    position: absolute;
+    content: "";
+    background: #111;
+    left: 0;
+    top: 50%;
+    height: 1px;
+    width: 100%;
+}
+ul.work li:hover {
+    color: #000;
+    border: none;
+}
+
+ul.work li.active {
+    border: none;
+    color: #000;
+}
+/*************************************************
+	    12.1  Portfolio Slider Section CSS
+**************************************************/
+.portfolio-items .inner{
+	background-color: transparent;
+    border: medium none;
+    margin-bottom: 0;
+    overflow: hidden;
+    padding: 15px;
+    position: relative;
+    display: block;
+    background: #fff;
+}
+.portfolio-content{
+    position: relative;
+    z-index: 0;
+}
+.portfolio-content img{
+    width: 100%;
+	opacity: 1;
+}
+.portfolio-items .overlay{
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	text-decoration: none;
+	z-index: 5;
+	padding: 20px;
+}
+.portfolio-items .overlay:hover{
+	background: #feea0e;
+	opacity: .5;
+	transition: all 0.5s ease-in-out 0s;
+}
+.portfolio-items .overlay > *{
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	transition: all .3s ease;
+	-webkit-transform: translateY(15px);
+	-moz-transform: translateY(15px);
+	-ms-transform: translateY(15px);
+	-o-transform: translateY(15px);
+	transform: translateY(15px);
+	opacity: 0;
+}
+.portfolio-items .overlay > h6{
+	font-size: 16px;
+	margin: 0;
+	letter-spacing: 2px;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-bottom: 8px;
+	-webkit-transition-delay: 0.2s;
+	-moz-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+.portfolio-items .portfolio-content:hover .overlay > h4{
+	-webkit-transition-delay: 0.3s;
+	-moz-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+}
+.portfolio-items .overlay > span{
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+    color: #2F3740;
+	letter-spacing: 1px;
+	-webkit-transition-delay: 0.1s;
+	-moz-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+.portfolio-items .portfolio-content:hover .overlay > span{
+	-webkit-transition-delay: 0.4s;
+	-moz-transition-delay: 0.4s;
+	transition-delay: 0.4s;
+}
+.portfolio-items .portfolio-content:hover .overlay > *{
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0);
+	opacity: 1;
+}
+.ripple{
+	border-radius: 50%;
+	position: absolute;
+    -webkit-transition: opacity .3s ease, transform 0s .3s ease;
+	-moz-transition: opacity .3s ease, transform 0s .3s ease;
+	transition: opacity .3s ease, transform 0s .3s ease;
+    
+}
+.portfolio-items > .inner:hover .ripple{
+    -webkit-transition: transform .8s ease, opacity .6s ease;
+	-moz-transition: transform .8s ease, opacity .6s ease;
+	transition: transform .8s ease, opacity .6s ease;
+	opacity: 0.5;
+}
+.white-popup {
+    position: relative;
+    background: #fff;
+    padding: 0px;
+    max-width: 650px;
+    margin: 30px auto;
+}
+.popup-details{
+    padding: 20px 20px;
+}
+.popup-details > h4 {
+	font-weight: 600;
+}
+.mfp-close-btn-in .mfp-close {
+    background: #fff;
+    border-radius: 50%;
+    color: #333;
+    font-size: 35px;
+    height: 40px;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    width: 40px;
+    opacity: 1;
+    line-height: 40px;
+}
+/**************************************************
+		13. Client Section CSS			
+**************************************************/
+.client_section{	
+}
+.client_part{
+	background: #f7f7f7;
+    text-align: center;
+    padding-bottom: 100px;
+	padding-top: 80px;
+}
+.client_header{
+	padding-top: 1px;
+	margin-bottom: 65px;	
+}
+.client_header h4{
+	font-family: 'PT Serif', serif;
+    line-height: 30px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -.3px;	
+}
+.client_header h2{
+    font-family: 'Lora', serif;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 60px;
+    margin-top: 0px;
+    margin-bottom: 15px;	
+}
+/**************************************************
+		13.1. Client Slider Section CSS			
+**************************************************/
+#owl-demo .item img{
+	width: auto;
+	margin: 10px;
+	text-align: center;
+	opacity: 0.3;
+	transition: all 0.5s ease-in-out 0s;
+}
+#owl-demo .item img:hover{
+	opacity: 1;
+	transition: all 0.5s ease-in-out 0s;
+}
+/**************************************************
+		14. Testimonial Slider Section CSS			
+**************************************************/
+.testimonial_slider{}
+.testimonial{
+    text-align: center;
+	padding-top: 80px;
+}
+.testimonial h4{
+    font-family: 'PT Serif', serif;
+    line-height: 30px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -0.3px;
+}
+
+.testimonial h2{
+    font-family: 'Lora', serif;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 60px;
+    margin-top: 0px;
+    margin-bottom: 15px;	
+}
+.description{
+    position: relative;
+    font-family: 'PT Serif',serif;
+	font-style: italic;
+    font-weight: 400;
+	font-size: 17px;
+    line-height: 35px;
+    margin-bottom: 30px;
+    padding: 0px 50px;
+	padding-top: 50px;
+}
+.pic{
+    width: 110px;
+    height: 110px;
+    margin: 0 auto;
+}
+.pic img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.testimonial-title{
+	font-family: 'Lora', serif !important;
+	font-style: normal !important;
+    font-weight: 700;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.testimonial-title > small{
+	display: block;
+    font-size: 15px;
+    font-weight: 500;
+	padding-top: 20px;
+	letter-spacing: .5px;
+}
+.owl-theme .owl-controls {
+    margin-top: 10px;
+    text-align: center;
+    padding-bottom: 85px;
+}
+.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span{
+    background: #feea0e;
+}
+.owl-theme .owl-controls .owl-page span{
+    opacity: 1;
+	background: #000;
+}
+/**************************************************
+		15. Blog Section CSS			
+**************************************************/
+.blog_section{}
+.blog_part{
+	background: #f7f7f7;
+    padding-bottom: 80px;
+	padding-top: 80px;
+}
+.blog_header{
+	padding-top: 1px;
+	margin-bottom: 60px;
+	text-align: center;
+}
+.blog_header h4{
+	font-family: 'PT Serif', serif;
+    line-height: 30px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -.3px;
+}
+.blog_header h2{
+    font-family: 'Lora', serif;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 60px;
+    margin-top: 0px;
+    margin-bottom: 15px;	
+}
+.blog_post{
+	margin-bottom: 20px;
+}
+.blog_post_single{
+	background: #fff;
+	padding-bottom: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	 -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.blog_post_single:hover {
+	transition: all 0.5s ease-in-out 0s;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	 -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* Start blog image overlay */
+.blog_overlay_container {
+    position: relative;
+    width: 100%;
+	background: #feea0e;
+}
+.blog_overlay_image {
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: .5s ease;
+	backface-visibility: hidden;
+}
+a.blog_button {
+    color: #000;
+    background-color: #feea0e;	
+    padding: 8px 20px;
+    font-weight: 500;
+    border: 1px solid #feea0e;
+    border-radius: 1px;
+	-webkit-transition: all ease 0.5s;
+	 -moz-transition: all ease 0.5s;
+	  transition: all ease 0.5s;		
+}
+.blog_overlay_middle {
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	 -ms-transform: translate(-50%, -50%);
+}
+
+.blog_overlay_container:hover .blog_overlay_image {
+	opacity: 0.6;
+}
+
+.blog_overlay_container:hover .blog_overlay_middle {
+	opacity: 1;
+}
+/* End blog image overlay */
+
+.blog_post_content{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.blog_post_content h4{
+	font-size: 20px;
+	font-family: 'Lora', serif;
+    line-height: 30px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+	margin: 25px 0;
+}
+.blog_post_content a{
+	color: #262626;
+	text-decoration: none;
+}
+.blog_post_single:hover .blog_post_content a,
+.blog_post_content a:hover{
+	color: #feea0e;
+	transition: all 0.3s ease-in-out 0s;
+}
+.post_icons i{
+	padding-right: 5px;
+}
+.blog_post p{
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    line-height: 30px;
+}
+p.post_icons {	
+    font-size: 14px !important;	
+	color: #7a7a7a;
+	border-top: 1px solid #eee;
+	padding-top: 15px;
+	margin-top: 25px;
+}
+.blog_post_content strong{
+	float: right;
+}
+/**************************************************
+		16. Contact Section CSS			
+**************************************************/
+.contact_section{
+	background:#fff;
+}
+.contact_part{
+	padding-top: 80px;
+}
+.contact_header{
+	text-align: center;	
+}
+.contact_header h4{
+	font-family: 'PT Serif', serif;
+    line-height: 30px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -.3px;
+}
+.contact_header h2{
+    font-family: 'Lora', serif;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 60px;
+    margin-top: 0px;
+    margin-bottom: 15px;	
+}
+.contact_form_body{	
+	overflow: hidden;
+	margin-top: 60px;
+}
+.contact-form{}
+.form-control {
+    border-radius: 2px !important;
+    -webkit-box-shadow: none; 
+    box-shadow: none; 
+}
+.form-group {
+    margin-bottom: 20px;
+	padding: 0;
+}
+input.form_input{
+	margin-right: 0;
+	width: 100%;
+	height: 45px;
+	background: #fff;
+    border: 2px solid #222222;
+	border-radius: 1px;
+}
+textarea.form_input{
+	background: #fff;
+    border: 2px solid #222222;
+	border-radius: 1px;
+	resize: none;
+}
+.help-block {
+    display: block;
+	margin: 0px 5px;
+    color: #737373;
+}
+.send_button {
+	font-size: 15px;
+	margin: 20px 0px;
+    text-transform: uppercase;
+    padding: 15px 25px;
+    letter-spacing: 0.5px;
+    background-color: #feea0e;
+    font-weight: 700;
+    color: #000;
+    border: 0px solid #feea0e;
+    border-radius: 1px;	
+    box-shadow: inset 0 0 0 0 #feea0e;
+	-webkit-transition: all ease 0.8s;
+	-moz-transition: all ease 0.8s;
+	transition: all ease 0.8s;
+}
+.send_button:hover{
+	background: #000;
+	box-shadow: inset 0 -100px 0 0 #000;
+	color: #fff;
+	opacity: 1;
+}
+/**************************************************
+		16.1 Client address CSS			
+**************************************************/
+.client_address{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding: 0px 30px;
+}
+.client_address i{
+	color: #feea0e;
+    font-size: 18px;
+	margin-right: 20px;
+	margin-top: 10px;
+}
+.client_address  ul{
+	list-style: none;
+}
+.client_address ul li{
+	display: inline-block;
+	font-weight: 700;
+}
+.client_address ul li:first-child{
+	display: inline-block;
+	padding-left: 0px;
+	padding-right:0px;
+}
+.client_address ul li a i {
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    background: #222222;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 800;
+    color: #fff;
+    padding-top: 8px;
+}
+.client_address ul li a i:hover{
+	background: #feea0e;
+	color: #222222;
+	transition: all 0.5s ease-in-out 0s;
+}
+/**************************************************
+		16.2 Google Map CSS			
+**************************************************/
+.client_map{
+	margin-top: 50px;	
+}
+#map{
+	overflow:hidden;
+	width:100%;
+	height: 300px;
+}
+
+/**************************************************
+		17. Footer Section CSS			
+**************************************************/
+.footer_section{
+	background: #000;
+	padding: 25px 0px;
+}
+.footer_body{
+	text-align: center;
+}
+.footer_body p {
+    font-size: 14px;
+    font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+/**************************************************
+		18. Scroll To Top Section CSS			
+**************************************************/
+#back-top {
+	position: fixed;
+	bottom: 20px;
+	margin-left: -45px;
+	z-index: 1;
+}
+#back-top span {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background: #feea0e;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 1px;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: all 0.5s ease-in-out 0s;
+    opacity: 0.9;
+}
+#back-top a:hover span {
+	opacity: 0.9;
+	background-color: #000;
+	animation: toBottomFromTop 0.4s forwards;
+}
+i.scroll_up_arrow {
+    font-size: 15px;
+    color: #fff;
+    padding: 10px 0px 0px 13px;
+}
+i.scroll_up_arrow:hover {  
+ 	color: #feea0e;
+	transition: all 0.5s ease-in-out 0s;
+	animation: fade in;
+}
+/**************************************************
+		19. media Queries		
+**************************************************/
+@media screen and (max-width: 991px){
+	.skills_part h3 {
+		margin-top: 70px;
+		margin-bottom: 35px;
+	}
+	.skill_progress {
+		margin-bottom: 25px;
+	}
+	.sinlge_counter {
+		margin-bottom: 40px;
+	}
+	.address_description{
+		margin-top: 20px;
+	}
+}
+
+@media screen and (max-width: 767px){
+	.navbar-inverse .navbar-collapse {
+		border-color: #feea0e;
+		background: #000;
+	}	
+	.navbar-nav>li>a {
+		font-size: 12px;
+		padding-left: 30px;
+	}
+	h1{
+		font-size: 50px;
+	}
+	.hero_overlay h4{	
+		margin-top: 0;
+	}
+	.skills_part h3 {
+		margin-top: 70px;
+		margin-bottom: 35px;
+	}
+	.skill_progress {
+		margin-bottom: 25px;
+	}
+	.sinlge_counter {
+		margin-bottom: 40px;
+	}
+	.service_header {
+		margin-bottom: 60px;
+	}
+	/* timeline media queries*/
+    ul.timeline:before {
+        left: 15px;
+    }
+    ul.timeline > li {
+        margin-bottom: 0px;
+        position: relative;
+        width:100%;
+        float: left;
+        clear: left;
+    }
+    ul.timeline > li > .timeline-panel {
+        width: calc(100% - 65px);
+        width: -moz-calc(100% - 65px);
+        width: -webkit-calc(100% - 65px);
+    }
+    ul.timeline > li > .timeline-badge {
+        left: 3px;
+        margin-left: 0;
+        top: 16px;
+    }
+    ul.timeline > li > .timeline-panel {
+        float: right;
+    }
+    ul.timeline > li > .timeline-panel:before {
+        border-left-width: 0;
+        border-right-width: 15px;
+        left: -15px;
+        right: auto;
+    }
+    ul.timeline > li > .timeline-panel:after {
+        border-left-width: 0;
+        border-right-width: 14px;
+        left: -14px;
+        right: auto;
+    }
+    .timeline > li.timeline-inverted {
+        float: left;
+        clear: left;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .timeline > li.timeline-inverted > .timeline-badge {
+        left: 3px;
+    }
+	/* End Timeline media queries */
+	.portfolio-items{
+		padding-left:0px;
+		padding-right:0px;	
+	}
+	.blog_header {
+		margin-bottom: 60px;
+	}
+	.contact_form_body{	
+		margin-top: 60px;
+	}
+	.client_map {
+		margin-top: 80px;
+	}
+	.address_description{
+		margin-top: 20px;
+	}
+	.footer_body {
+		text-align: center;
+	}
+	.social_link {
+		text-align: center;
+		padding-left: 0px;
+	}
+}
+
+@media screen and (max-width: 640px){
+	.navbar-inverse .navbar-collapse {
+		border-color: #feea0e;
+		background: #000;
+	}
+	.navbar-nav>li>a {
+		font-size: 12px;
+		padding-left: 30px;
+	}
+	h1{
+		font-size: 50px;
+	}	
+	.client_map {
+		padding-top: 30px;
+	}
+    .description{
+        font-size: 18px;
+        line-height: 29px;		
+    }
+    .description:before,
+    .description:after{
+        font-size: 25px;
+    }
+	.social_link ul {
+		margin: 0;
+		padding: 0;
+	} 	
+}
+
+@media screen and (max-width: 480px){
+	h1{
+		font-size: 30px;
+	}
+	.hero_overlay h4 {
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-width: 324px){
+	
+	.blog_post_content strong {
+		float: none; 
+	}
+}	
+/***************************************************
+						The End
+/***************************************************/
