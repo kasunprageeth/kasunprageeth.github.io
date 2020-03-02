@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Bootstrap Card</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet" href="typewriter.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+		integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/layout.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/1.0.0/typewriter.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+
+	<style>
+		.header_color {
+			transition: all ease .3s;
+		}
+
+		.navbar-brand {
+			transition: all ease .3s;
+		}
+
+		body,
+		html {
+			height: 100%;
+			margin: 0;
+			font: 400 15px/1.8 "Lato", sans-serif;
+			color: #777;
+		}
+
+		.bgimg-1,
+		.bgimg-2,
+		.bgimg-3 {
+			position: relative;
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+
+		}
+
+		.bgimg-1 {
+			background-image: url("https://images4.alphacoders.com/563/563004.jpg");
+			min-height: 100%;
+		}
+
+		.bgimg-2 {
+			background-image: url("https://images.pexels.com/photos/4241/cold-snow-black-and-white-road.jpg?cs=srgb&dl=avenue-bend-black-and-white-4241.jpg&fm=jpg");
+			min-height: 400px;
+		}
+
+		.bgimg-3 {
+			background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5OshEM5R4BGJ4Y1ee0pNZ9C2XVuj2c0VEubzUhPn0OBnq2lhOBQ");
+			min-height: 400px;
+		}
+
+		.caption {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			width: 100%;
+			text-align: center;
+			color: #f1ebeb;
+		}
+
+		.caption span.border {
+			background-color: #111;
+			color: #fff;
+			padding: 18px;
+			font-size: 25px;
+			letter-spacing: 10px;
+		}
+
+		h1 {
+			letter-spacing: 5px;
+			text-transform: uppercase;
+			font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			font-weight: 900;
+		}
+
+		.header_Text {
+			font-size: 5rem;
+			line-height: 5rem;
+			font-weight: 900;
+			text-transform: uppercase;
+			font-family: 'Special Elite', cursive;
+		}
+
+		.logo_name {
+			font-size: 27px;
+			margin-left: 72px;
+			font-family: 'Permanent Marker', cursive;
+			text-transform: uppercase;
+		}
+
+		.header_other_tab {
+			font-size: 20px;
+		}
+
+		.ct-btn-scroll {
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+			padding-top: 500px;
+			padding: 0;
+			z-index: 9;
+			letter-spacing: normal;
+			color: white;
+			border: 2px solid white;
+			border-radius: 100% !important;
+			-webkit-transition: all 0.5s;
+			transition: all 0.5s;
+		}
+
+		.crad {
+			text-transform: uppercase;
+			font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			font-weight: 900;
+		}
+
+		.card-img-overlay {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			padding: 1.25rem;
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: .5;
+			background-color: #0e0202;
+		}
+
+		.workFlowicon {
+			font-size: 30px;
+			line-height: 70px;
+			width: 75px;
+			height: 75px;
+			text-align: center;
+			border: 3px solid #926f6f;
+		}
+
+		.card1 {
+			margin-top: 15px;
+			margin-right: -15px;
+			z-index: 1;
+			margin-bottom: 30px;
+			padding: 30px;
+			text-align: center;
+			color: #222;
+			background: white;
+			-webkit-box-shadow: 0 0 30px 5px rgba(34, 34, 34, 0.75);
+			box-shadow: 0 0 30px 5px rgba(34, 34, 34, 0.7);
+			border-radius: 0;
+		}
+
+		.card2 {
+			position: absolute;
+			left: 0;
+			width: 100%;
+			margin: 0;
+			padding: 45px 30px;
+			z-index: 1;
+			margin-bottom: 30px;
+			padding: 30px;
+			text-align: center;
+			color: #222;
+			background: white;
+			-webkit-box-shadow: 0 0 30px 5px rgba(34, 34, 34, 0.75);
+			box-shadow: 0 0 30px 5px rgba(34, 34, 34, 0.7);
+			border-radius: 0;
+		}
+
+		.card3 {
+			margin-top: 15px;
+			margin-left: -15px;
+			position: relative;
+			width: 100%;
+			text-align: center;
+			color: #222;
+			padding: 30px;
+			background: white;
+			min-height: 1px;
+			padding-right: 15px;
+			padding-left: 15px;
+			border-radius: 0;
+		}
+
+		.price {
+			font-size: 50px;
+			font-weight: 900;
+		}
+
+		.fa-rotate-45 {
+			-webkit-transform: rotate(90deg);
+			-moz-transform: rotate(90deg);
+			-ms-transform: rotate(90deg);
+			-o-transform: rotate(90deg);
+			transform: rotate(90deg);
+		}
+	</style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top header_color " id="header_baground" role="navigation">
+		<a class="navbar-brand logo_name" href="#">Kasun</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+			aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="padding-left: 53%;">
+			<ul class="navbar-nav ml-auto mt-2 mt-lg-0" style="line-height: 1.5;">
+				<li class="nav-item">
+					<a class="nav-link header_other_tab" href="#about">About <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link header_other_tab" href="#team">Team</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link header_other_tab" href="#process">Process</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link header_other_tab" href="#work">Work</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link header_other_tab" href="#pricing">Pricing</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link header_other_tab" href="#contact">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="bgimg-1">
+		<div class="caption">
+			<span class="header_Text typewrite" data-period="2000"
+				data-type='[ "Hi, Im Kasun.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'></span>
+			<span class="wrap"></span>
+			<p>Creat everything any time</p>
+			<a href="#about"><img
+					src="data:image/svg+xml;base64,
+		PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgd2lkdGg9IjUxMiIgY2xhc3M9IiI+PGc+PHBhdGggZD0ibTI1NiA1MTJjLTY4LjM3ODkwNiAwLTEzMi42Njc5NjktMjYuNjI4OTA2LTE4MS4wMTk1MzEtNzQuOTgwNDY5LTQ4LjM1MTU2My00OC4zNTE1NjItNzQuOTgwNDY5LTExMi42NDA2MjUtNzQuOTgwNDY5LTE4MS4wMTk1MzFzMjYuNjI4OTA2LTEzMi42Njc5NjkgNzQuOTgwNDY5LTE4MS4wMTk1MzFjNDguMzUxNTYyLTQ4LjM1MTU2MyAxMTIuNjQwNjI1LTc0Ljk4MDQ2OSAxODEuMDE5NTMxLTc0Ljk4MDQ2OXMxMzIuNjY3OTY5IDI2LjYyODkwNiAxODEuMDE5NTMxIDc0Ljk4MDQ2OWM0OC4zNTE1NjMgNDguMzUxNTYyIDc0Ljk4MDQ2OSAxMTIuNjQwNjI1IDc0Ljk4MDQ2OSAxODEuMDE5NTMxcy0yNi42Mjg5MDYgMTMyLjY2Nzk2OS03NC45ODA0NjkgMTgxLjAxOTUzMWMtNDguMzUxNTYyIDQ4LjM1MTU2My0xMTIuNjQwNjI1IDc0Ljk4MDQ2OS0xODEuMDE5NTMxIDc0Ljk4MDQ2OXptMC00NzJjLTExOS4xMDE1NjIgMC0yMTYgOTYuODk4NDM4LTIxNiAyMTZzOTYuODk4NDM4IDIxNiAyMTYgMjE2IDIxNi05Ni44OTg0MzggMjE2LTIxNi05Ni44OTg0MzgtMjE2LTIxNi0yMTZ6bTEzOC4yODUxNTYgMTgyLTI4LjI4NTE1Ni0yOC4yODUxNTYtMTEwIDExMC0xMTAtMTEwLTI4LjI4NTE1NiAyOC4yODUxNTYgMTM4LjI4NTE1NiAxMzguMjg1MTU2em0wIDAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0ZGRkZGRiIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiPjwvcGF0aD48L2c+IDwvc3ZnPg==" width="40px" height="40px"/></a>
+
+		</div>
+	</div>
+
+	<div style="text-align:center;padding:50px 80px;text-align: justify;" class="wow fadeIn" id="about">
+		<h1 style="text-align:center;">This is our story</h1>
+		<p>Parallax scrolling is a web site trend where the background content is moved at a different speed than the
+			foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed
+			posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit
+			dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi, curabitur
+			aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque non molestie dolor, nunc nisl
+			dapibus vestibulum at, sodales tincidunt mauris ullamcorper, dapibus pulvinar, in in neque risus odio.
+			Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem
+			mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante
+			augue etiam maecenas, porta porttitor placerat leo.</p>
+	</div>
+
+	<div class="page-section bg-light wow fadeIn" id="team"
+		style="padding:100px;visibility: visible;animation-name: fadeIn;">
+		<h2 style="text-align: center;">OUR TEAM</h2>
+		<p style="font-size: 18px;line-height: 1.5;text-align: center;">We are a group of digital marketers with a
+			passion for great art that serves a practical purpose.</p>
+		<div class="row">
+			<div class="col-md-3">
+			</div>
+			<div class="col-md-3 wow fadeIn">
+				<div class="card img-fluid" style="width:500px;max-width: 115%;margin-left: -38px;">
+					<img class="card-img-top view overlay" src="http://i.imgur.com/Hw7sWGU.png"
+						style="max-height: 250px;overflow:hidden;">
+					<div class="card-img-overlay" style="padding-top: 111px;">
+						<h4 class="card-title crad" style="color: #f3eeeefc;text-align: center;">Kasun Prageeth</h4>
+						<ul class="list-inline" style="text-align: center;">
+							<li class="list-inline-item"><a class="social-icon text-xs-center " target="_blank"
+									href="#"><i class="fab fa-facebook fa-lg"></i></a></li>
+							<li class="list-inline-item"><a class="social-icon text-xs-center" target="_blank"
+									href="#"><i class="fab fa-instagram fa-lg"></i></a></li>
+							<li class="list-inline-item"><a class="social-icon text-xs-center" target="_blank"
+									href="#"><i class="fab fa-linkedin fa-lg"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 wow fadeIn">
+				<div class="card img-fluid" style="width:500px;max-width: 115%;">
+					<img class="card-img-top view overlay" src="http://i.imgur.com/Hw7sWGU.png"
+						style="max-height: 250px;overflow:hidden;">
+					<div class="card-img-overlay" style="padding-top: 111px;">
+						<h4 class="card-title crad" style="color: #f3eeeefc;text-align: center;">Kasun Prageeth</h4>
+						<ul class="list-inline" style="text-align: center;">
+							<li class="list-inline-item"><a class="social-icon text-xs-center " target="_blank"
+									href="#"><i class="fab fa-facebook fa-lg"></i></a></li>
+							<li class="list-inline-item"><a class="social-icon text-xs-center" target="_blank"
+									href="#"><i class="fab fa-instagram fa-lg"></i></a></li>
+							<li class="list-inline-item"><a class="social-icon text-xs-center" target="_blank"
+									href="#"><i class="fab fa-linkedin fa-lg"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+			</div>
+		</div>
+	</div>
+	<div class="bgimg-2" style="position:relative;">
+		<div class="container wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+			<div class="row">
+				<div class="mx-auto" style="padding-top: 100px;text-align: center;">
+					<span style="font-size: 40px;line-height: 42px;color: white;">Good
+						<span style="color: #EF4035">design</span>
+						is finding that perfect balance between the way something
+						<span style="color: #EF4035">looks</span>
+						and how it
+						<span style="color: #EF4035">functions</span>.</span>
+					</br>
+					<a class="btn btn-outline-warning js-scroll-trigger" href="#process" style="margin-top: 25px;">How
+						We Work</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="page-section bg-light wow fadeIn" id="process" style="padding: 100px;">
+		<h2 style="text-align: center;">OUR PROCESS</h2>
+		<p style="font-size: 18px;line-height: 1.5;text-align: center;">Here is an overview of how we approach each new
+			project.</p>
+		<div class="row mt-4">
+
+			<!-- Service Item 1 -->
+			<div class="col-lg-4 wow fadeIn" data-wow-delay=".2s"
+				style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+				<div class="media">
+					<div class="pull-left">
+						<i class="fa fa-clipboard rounded-circle workFlowicon"></i>
+					</div>
+					<div class="media-body">
+						<h3 class="media-heading">Plan</h3>
+						<ul>
+							<li>Client interview</li>
+							<li>Gather consumer data</li>
+							<li>Create content strategy</li>
+							<li>Analyze research</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Service Item 2 -->
+			<div class="col-lg-4 wow fadeIn" data-wow-delay=".4s"
+				style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+				<div class="media">
+					<div class="pull-left">
+						<i class="material-icons rounded-circle workFlowicon">edit</i>
+					</div>
+					<div class="media-body">
+						<h3 class="media-heading">Create</h3>
+						<ul>
+							<li>Build wireframe</li>
+							<li>Gather client feedback</li>
+							<li>Code development</li>
+							<li>Marketing review</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Service Item 3 -->
+			<div class="col-lg-4 wow fadeIn" data-wow-delay=".6s"
+				style="visibility: visible; animation-delay: 0.6s; animation-name: fadeIn;">
+				<div class="media">
+					<div class="pull-left">
+						<i class="fa fa-rocket rounded-circle workFlowicon"></i>
+					</div>
+					<div class="media-body">
+						<h3 class="media-heading">Launch</h3>
+						<ul>
+							<li>Deploy website</li>
+							<li>Market product launch</li>
+							<li>Collect UX data</li>
+							<li>Quarterly maintenence</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="wow fadeIn" id="work" style="padding: 100px;">
+		<h2 style="text-align: center;">OUR WORK</h2>
+		<p style="font-size: 18px;line-height: 1.5;text-align: center;">Here are some other projects that we've worked
+			on.</p>
+		<ul id="filters" class="clearfix" style="margin-left: 383px;">
+
+			<li><button type="button" class="btn btn-outline-danger filter avtive" data-filter=".app,.card,.icon"
+					style="padding: 5px 20px;margin: 5px;">All</button></li>
+			<li><button type="button" class="btn btn-outline-danger filter" data-filter=".app"
+					style="padding: 5px 20px;margin: 5px;">WEB</button></li>
+			<li><button type="button" class="btn btn-outline-danger filter" data-filter=".card"
+					style="padding: 5px 20px;margin: 5px;">GRAPHIC</button></li>
+			<li><button type="button" class="btn btn-outline-danger filter" data-filter=".icon"
+					style="padding: 5px 20px;margin: 5px;">IDENTITY</button></li>
+		</ul>
+		<div id="portfoliolist" align="center">
+
+			<div class="portfolio app" data-cat="app">
+				<div class="portfolio-wrapper">
+					<img src="img/portfolios/app/1.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Visual Infography</a>
+							<span class="text-category">APP</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio icon" data-cat="icon">
+				<div class="portfolio-wrapper">
+					<img src="img/portfolios/app/1.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Visual Infography</a>
+							<span class="text-category">APP</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio card" data-cat="card">
+				<div class="portfolio-wrapper">
+					<img src="img/portfolios/card/1.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Typography Company</a>
+							<span class="text-category">Business card</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio app" data-cat="app">
+				<div class="portfolio-wrapper">
+					<img src="img/portfolios/app/3.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Weatherette</a>
+							<span class="text-category">APP</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio icon" data-cat="icon">
+				<div class="portfolio-wrapper">
+					<img src="img/portfolios/app/1.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Visual Infography</a>
+							<span class="text-category">APP</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio card" data-cat="card">
+				<div class="portfolio-wrapper">
+					<img src="img/portfolios/card/4.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">BMF</a>
+							<span class="text-category">Business card</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio card" data-cat="card">
+				<div class="portfolio-wrapper">
+					<img src="img/portfolios/card/5.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Techlion</a>
+							<span class="text-category">Business card</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio icon" data-cat="icon">
+				<div class="portfolio-wrapper">
+					<img src="img/portfolios/app/1.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Visual Infography</a>
+							<span class="text-category">APP</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio app" data-cat="app">
+				<div class="portfolio-wrapper">
+					<img src="img/portfolios/app/2.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Graph Plotting</a>
+							<span class="text-category">APP</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio card" data-cat="card">
+				<div class="portfolio-wrapper">
+					<img src="img/portfolios/card/2.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">QR Quick Response</a>
+							<span class="text-category">Business card</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="bgimg-3 wow fadeIn" id="pricing" style="padding: 100px;">
+		<h2 style="text-align: center;font-size: 3.8em;color: #ffffffb0;">Pricing</h2>
+		<p style="font-size: 18px;line-height: 1.5;text-align: center;color: #09b9b9;">This is pricing bro!</p>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="card card1 wow fadeIn">
+					<div class="card-body">
+						<h2 style="font-weight: 900;text-transform: uppercase">BASIC</h2>
+						<hr style="border-top: 1px solid #5a3434;border-bottom: 1px solid #d8cbcb;">
+						<div style="margin-bottom: 20px;">
+							<span class="price">
+								<sup>$</sup>25</span>
+							/ month
+						</div>
+						<ul class="list-group mb-3">
+							<li class="list-group-item">60 Users</li>
+							<li class="list-group-item">Unlimited Forums</li>
+							<li class="list-group-item">Unlimited Reports</li>
+							<li class="list-group-item">3,000 Entries per Month</li>
+							<li class="list-group-item">200 MB Storage</li>
+							<li class="list-group-item">Unlimited Support</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card card2 wow fadeIn">
+					<div class="card-body">
+						<h2 style="font-weight: 900;text-transform: uppercase">PLUSE</h2>
+						<hr style="border-top: 1px solid #5a3434;border-bottom: 1px solid #d8cbcb;">
+						<div style="margin-bottom: 20px;">
+							<span class="price">
+								<sup>$</sup>25</span>
+							/ month
+						</div>
+						<ul class="list-group mb-3">
+							<li class="list-group-item">60 Users</li>
+							<li class="list-group-item">Unlimited Forums</li>
+							<li class="list-group-item">Unlimited Reports</li>
+							<li class="list-group-item">3,000 Entries per Month</li>
+							<li class="list-group-item">200 MB Storage</li>
+							<li class="list-group-item">Unlimited Support</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card card3 wow fadeIn">
+					<div class="card-body">
+						<h2 style="font-weight: 900;text-transform: uppercase">PREMIUM</h2>
+						<hr style="border-top: 1px solid #5a3434;border-bottom: 1px solid #d8cbcb;">
+						<div style="margin-bottom: 20px;">
+							<span class="price">
+								<sup>$</sup>25</span>
+							/ month
+						</div>
+						<ul class="list-group mb-3">
+							<li class="list-group-item">60 Users</li>
+							<li class="list-group-item">Unlimited Forums</li>
+							<li class="list-group-item">Unlimited Reports</li>
+							<li class="list-group-item">3,000 Entries per Month</li>
+							<li class="list-group-item">200 MB Storage</li>
+							<li class="list-group-item">Unlimited Support</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bgimg-1 wow fadeIn" id="contact" style="padding: 100px;">
+		<h2 style="text-align: center;font-size: 3.8em;color: #ffffffb0;">CONTACT US</h2>
+		<p style="font-size: 18px;line-height: 1.5;text-align: center;color: #09b9b9;">Please tell us about your next
+			project and we will let you know what we can do to help you.</p>
+		<div class="row">
+			<div class="col-md-6 wow fadeIn"
+				style="margin: 75px 0;position: relative;width: 100%;min-height: 1px;padding-right: 15px;padding-left: 15px;text-align: center;color:rgba(255, 255, 255, 0.7)">
+				<h2 style="font-weight: 900;text-transform: uppercase;">
+					<i class="fa fa-phone fa-rotate-45"></i>
+					Call</h2>
+				<p>555-213-4567</p>
+			</div>
+			<div class="col-md-6 wow fadeIn"
+				style="margin: 75px 0;position: relative;width: 100%;min-height: 1px;padding-right: 15px;padding-left: 15px;text-align: center;color:rgba(255, 255, 255, 0.7)">
+				<h2 style="font-weight: 900;text-transform: uppercase;">
+					<i class="fa fa-envelope"></i>
+					Email</h2>
+				<p>
+					<a href="mailto:mail@example.com"
+						style="color: rgba(255, 255, 255, 0.7);text-decoration: none;">mail@example.com</a>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12" style="text-align: center;">
+				<ul class="list-inline">
+					<li class="list-inline-item">
+						<a href="#" style="color: rgba(255, 255, 255, 0.7);">
+							<i class="fab fa-facebook fa-fw fa-2x"></i>
+						</a>
+					</li>
+					<li class="list-inline-item">
+						<a href="#" style="color: rgba(255, 255, 255, 0.7);">
+							<i class="fab fa-instagram fa-fw fa-2x"></i>
+						</a>
+					</li>
+					<li class="list-inline-item">
+						<a href="#" style="color: rgba(255, 255, 255, 0.7);">
+							<i class="fab fa-linkedin fa-fw fa-2x"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</body>
+<script>
+	new WOW().init();
+	$(document).ready(function () {
+		$(window).scroll(function () {
+			var scroll = $(window).scrollTop();
+			if (scroll > 100) {
+				$(".header_color").css("background", "#393c40");
+			}
+
+			else {
+				$(".header_color").css("background", "rgba(51, 51, 51, 0)");
+			}
+		})
+	})
+
+	var TxtType = function (el, toRotate, period) {
+		this.toRotate = toRotate;
+		this.el = el;
+		this.loopNum = 0;
+		this.period = parseInt(period, 10) || 2000;
+		this.txt = '';
+		this.tick();
+		this.isDeleting = false;
+	};
+
+	TxtType.prototype.tick = function () {
+		var i = this.loopNum % this.toRotate.length;
+		var fullTxt = this.toRotate[i];
+
+		if (this.isDeleting) {
+			this.txt = fullTxt.substring(0, this.txt.length - 1);
+		} else {
+			this.txt = fullTxt.substring(0, this.txt.length + 1);
+		}
+
+		this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+		var that = this;
+		var delta = 200 - Math.random() * 100;
+
+		if (this.isDeleting) { delta /= 2; }
+
+		if (!this.isDeleting && this.txt === fullTxt) {
+			delta = this.period;
+			this.isDeleting = true;
+		} else if (this.isDeleting && this.txt === '') {
+			this.isDeleting = false;
+			this.loopNum++;
+			delta = 500;
+		}
+
+		setTimeout(function () {
+			that.tick();
+		}, delta);
+	};
+
+	window.onload = function () {
+		var elements = document.getElementsByClassName('typewrite');
+		for (var i = 0; i < elements.length; i++) {
+			var toRotate = elements[i].getAttribute('data-type');
+			var period = elements[i].getAttribute('data-period');
+			if (toRotate) {
+				new TxtType(elements[i], JSON.parse(toRotate), period);
+			}
+		}
+		// INJECT CSS
+		var css = document.createElement("style");
+		css.type = "text/css";
+		css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+		document.body.appendChild(css);
+	};
+
+	$(document).ready(function () {
+		$("a").on('click', function (event) {
+			if (this.hash !== "") {
+				event.preventDefault();
+				var hash = this.hash;
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top
+				}, 800, function () {
+					window.location.hash = hash;
+				});
+			}
+		});
+	});
+
+	$(function () {
+
+		var filterList = {
+
+			init: function () {
+
+				// MixItUp plugin
+				// http://mixitup.io
+				$('#portfoliolist').mixItUp({
+					selectors: {
+						target: '.portfolio',
+						filter: '.filter'
+					},
+					load: {
+						filter: '.app'
+					}
+				});
+
+			}
+
+		};
+
+		// Run the show!
+		filterList.init();
+
+
+	});	
+</script>
+
+</html>
